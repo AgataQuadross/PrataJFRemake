@@ -1,6 +1,74 @@
-:root{
+:root {
     --Cinza: #c9c9c9;
     --Cinza-Escuro: #6b6b6b;
     --Preto: #181818;
     --Transparente: #18181880;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Cinza);
+    color: var(--Preto);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-image: url("../img/stackcolaresbg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    height: 400px;
+}
+
+nav {
+    background-color: var(--Cinza-Escuro);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    padding: 10px;
+}
+
+.navegador {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+}
+
+.navegador li {
+    padding-left: 15px;
+}
+
+.navegador a {
+    color: var(--Preto);
+    text-decoration: none;
+}
+
+.navegador a:hover {
+    color: var(--Cinza);
+}
+
+footer {
+    background-color: var(--Preto);
+    height: 200px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+footer p {
+    color: var(--Cinza);
 }
