@@ -1,0 +1,70 @@
+:root {
+    --Cinza: #c9c9c9;
+    --Cinza-Escuro: #6b6b6b;
+    --Preto: #181818;
+    --Transparente: #18181880;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Cinza);
+    color: var(--Preto);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* sobrepondo a cor do menu do bootstrap */
+.menu-principal {
+    background-color: var(--Cinza-Escuro);
+    padding: 10px;
+}
+
+/* links do menu */
+.link-menu {
+    color: var(--Preto);
+    font-weight: bold;
+}
+
+.link-menu:hover {
+    color: var(--Cinza);
+}
+
+.cabecalho {
+    background-image: url("../img/stackcolaresbg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    height: 400px;
+    background-color: var(--Preto);
+}
+
+.titulo-principal {
+    color: var(--Cinza);
+    margin-top: 40px;
+}
+
+/* ajustando os cards das lojas pra n ficar um branco muito forte */
+.cartao-loja {
+    border: 2px solid var(--Cinza-Escuro);
+    background-color: #eaeaea; 
+}
+
+
+.rodape {
+    background-color: var(--Preto);
+    height: 100px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape p {
+    color: var(--Cinza);
+    margin: 0;
+}
