@@ -16,3 +16,11 @@
     font-weight: 300;
     margin: 0 0 1.5rem 0;
 }
+
+.meio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
