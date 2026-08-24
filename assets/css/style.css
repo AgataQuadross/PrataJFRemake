@@ -26,7 +26,7 @@ header {
 }
 
 nav {
-    background-color: var(--Cinza-Escuro);
+    background-color: var(--Cinza);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -54,9 +54,8 @@ nav {
     text-decoration: none;
 }
 
-.navegador a:hover {
-    color: var(--Cinza);
-}
+/* .navegador a:hover {
+} */
 
 footer {
     background-color: var(--Preto);
@@ -64,7 +63,8 @@ footer {
     width: 100%;
     padding: 20px;
     display: flex;
-    position: fixed;
+    justify-content: center;
+    position: relative;
     bottom: 0;
     left: 0;
 }
