@@ -74,3 +74,136 @@ footer {
 footer p {
     color: var(--Cinza);
 }
+
+/* --- Principal --- */
+
+:root {
+    --Cinza: #c9c9c9;
+    --Cinza-Escuro: #6b6b6b;
+    --Preto: #181818;
+    --Transparente: #18181880;
+}
+
+
+.grid-produtos {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(6, 20vh);
+    /* 3 colunas */
+    gap: 10px;
+    max-width: 100px;
+    margin: auto;
+}
+
+.view-produto {
+    border: none;
+    border-radius: 5px;
+    height: 130px;
+    width: 130px;
+    text-decoration: none;
+    color: var(--Preto);
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 3px 4px 3px var(--Transparente);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .view-produto:hover {
+    border: 2px dashed var(--Branco);
+    transition: all 0.2s;
+} */
+
+/* --- História--- */
+
+.container-historia {
+    width: 80%;
+    margin: 40px auto;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.letra-topo {
+    font-size: medium;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.letra-historia {
+    font-size: small;
+    font-weight: 300;
+    margin: 0 0 1.5rem 0;
+}
+
+/* --- Localizações --- */
+
+:root {
+    --Cinza: #c9c9c9;
+    --Cinza-Escuro: #6b6b6b;
+    --Preto: #181818;
+    --Transparente: #18181880;
+}
+
+/* sobrepondo a cor do menu do bootstrap */
+.menu-principal {
+    background-color: var(--Cinza-Escuro);
+    padding: 10px;
+}
+
+/* links do menu */
+.link-menu {
+    color: var(--Preto);
+    font-weight: bold;
+}
+
+.link-menu:hover {
+    color: var(--Cinza);
+}
+
+.cabecalho {
+    background-image: url("../img/stackcolaresbg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    height: 400px;
+    background-color: var(--Preto);
+}
+
+.titulo-principal {
+    color: var(--Cinza);
+    margin-top: 40px;
+}
+
+/* ajustando os cards das lojas pra n ficar um branco muito forte */
+.cartao-loja {
+    border: 2px solid var(--Cinza-Escuro);
+    background-color: #eaeaea;
+}
+
+
+.rodape {
+    background-color: var(--Preto);
+    height: 100px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape p {
+    color: var(--Cinza);
+    margin: 0;
+}
+
+/* --- Contato --- */
+
+.meio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    margin: 50px;
+}
