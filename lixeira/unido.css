@@ -1,0 +1,92 @@
+:root {
+    --Cinza: #c9c9c9;
+    --Cinza-Escuro: #6b6b6b;
+    --Preto: #181818;
+    --Transparente: #18181880;
+}
+
+/* --- História--- */
+
+.container-historia {
+    width: 80%;
+    margin: 40px auto;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.letra-topo {
+    font-size: medium;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.letra-historia {
+    font-size: small;
+    font-weight: 300;
+    margin: 0 0 1.5rem 0;
+}
+
+/* --- Localizações --- */
+
+/* sobrepondo a cor do menu do bootstrap */
+.menu-principal {
+    background-color: var(--Cinza-Escuro);
+    padding: 10px;
+}
+
+/* links do menu */
+.link-menu {
+    color: var(--Preto);
+    font-weight: bold;
+}
+
+.link-menu:hover {
+    color: var(--Cinza);
+}
+
+.cabecalho {
+    background-image: url("../img/stackcolaresbg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    height: 400px;
+    background-color: var(--Preto);
+}
+
+.titulo-principal {
+    color: var(--Cinza);
+    margin-top: 40px;
+}
+
+/* ajustando os cards das lojas pra n ficar um branco muito forte */
+.cartao-loja {
+    border: 2px solid var(--Cinza-Escuro);
+    background-color: #eaeaea;
+}
+
+
+.rodape {
+    background-color: var(--Preto);
+    height: 100px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape p {
+    color: var(--Cinza);
+    margin: 0;
+}
+
+/* --- Contato --- */
+
+.meio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    margin: 50px;
+}
