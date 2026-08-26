@@ -9,14 +9,18 @@
 .grid-produtos {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(6, 20vh);
-    /* 3 colunas */
-    gap: 10px;
+    grid-template-columns: repeat(6, 15vh);
+    /* 6 colunas */
+    gap: 30px;
     max-width: 100px;
     margin: auto;
 }
 
 .view-produto {
+    background-image: url(../img/1000019731.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
     border: none;
     border-radius: 5px;
     height: 130px;
@@ -31,7 +35,13 @@
     justify-content: center;
 }
 
-/* .view-produto:hover {
-    border: 2px dashed var(--Branco);
-    transition: all 0.2s;
-} */
+.view-produto:hover {
+    transform: scale(1.1)
+}
+
+h2 {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 30px;
+}

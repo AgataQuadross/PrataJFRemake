@@ -17,30 +17,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* sobrepondo a cor do menu do bootstrap */
-.menu-principal {
-    background-color: var(--Cinza-Escuro);
-    padding: 10px;
-}
-
-/* links do menu */
-.link-menu {
-    color: var(--Preto);
-    font-weight: bold;
-}
-
-.link-menu:hover {
-    color: var(--Cinza);
-}
-
-.cabecalho {
-    background-image: url("../img/stackcolaresbg.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    height: 400px;
-    background-color: var(--Preto);
-}
 
 .titulo-principal {
     color: var(--Cinza);
@@ -67,4 +43,11 @@ body {
 .rodape p {
     color: var(--Cinza);
     margin: 0;
+}
+
+.meio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
 }

@@ -69,40 +69,9 @@ footer {
     position: relative;
     bottom: 0;
     left: 0;
+    margin-top: 50px;
 }
 
 footer p {
     color: var(--Cinza);
 }
-
-/* --- Principal --- */
-
-.grid-produtos {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(6, 20vh);
-    /* 3 colunas */
-    gap: 10px;
-    max-width: 100px;
-    margin: auto;
-}
-
-.view-produto {
-    border: none;
-    border-radius: 5px;
-    height: 130px;
-    width: 130px;
-    text-decoration: none;
-    color: var(--Preto);
-    font-size: 12px;
-    font-weight: bold;
-    box-shadow: 3px 4px 3px var(--Transparente);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* .view-produto:hover {
-    border: 2px dashed var(--Branco);
-    transition: all 0.2s;
-} */
