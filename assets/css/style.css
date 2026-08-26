@@ -61,7 +61,7 @@ nav {
 
 footer {
     background-color: var(--Preto);
-    height: 200px;
+    height: auto;
     width: 100%;
     padding: 20px;
     display: flex;
@@ -70,8 +70,12 @@ footer {
     bottom: 0;
     left: 0;
     margin-top: 50px;
+    color: var(--Cinza);
 }
 
-footer p {
+.redes, .redes a, .redes li{
+    margin: 8px;
+    list-style: none;
+    text-decoration: none;
     color: var(--Cinza);
 }

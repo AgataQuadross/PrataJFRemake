@@ -4,19 +4,96 @@
     --Preto: #181818;
     --Transparente: #18181880;
 }
-/* --- Principal --- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Cinza);
+    color: var(--Preto);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+header {
+    background-image: url("../img/stackcolaresbg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    height: 400px;
+}
+
+nav {
+    background-color: var(--Cinza);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    padding: 10px;
+}
+
+.navegador {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+}
+
+.navegador li {
+    padding-left: 15px;
+}
+
+.navegador a {
+    color: var(--Preto);
+    text-decoration: none;
+}
+
+/* .navegador a:hover {
+} */
+
+footer {
+    background-color: var(--Preto);
+    height: 200px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: 50px;
+}
+
+footer p {
+    color: var(--Cinza);
+}
+
+
+/* --- Principal--- */
 
 .grid-produtos {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(6, 20vh);
-    /* 3 colunas */
-    gap: 10px;
+    grid-template-columns: repeat(6, 15vh);
+    /* 6 colunas */
+    gap: 30px;
     max-width: 100px;
     margin: auto;
 }
 
 .view-produto {
+    background-image: url(../img/1000019731.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
     border: none;
     border-radius: 5px;
     height: 130px;
@@ -31,58 +108,37 @@
     justify-content: center;
 }
 
-/* .view-produto:hover {
-    border: 2px dashed var(--Branco);
-    transition: all 0.2s;
-} */
+.view-produto:hover {
+    transform: scale(1.1)
+}
 
-/* --- História--- */
-
-.container-historia {
-    width: 80%;
-    margin: 40px auto;
-    padding: 80px 20px;
+h2 {
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 30px;
 }
 
-.letra-topo {
-    font-size: medium;
-    font-weight: bold;
-    margin: 0 0 5px 0;
-}
+
+/* --- Historia--- */
 
 .letra-historia {
-    font-size: small;
-    font-weight: 300;
-    margin: 0 0 1.5rem 0;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    margin: 20px;
 }
 
-/* --- Localizações --- */
-
-/* sobrepondo a cor do menu do bootstrap */
-.menu-principal {
-    background-color: var(--Cinza-Escuro);
-    padding: 10px;
+.meio-coluna {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
 }
 
-/* links do menu */
-.link-menu {
-    color: var(--Preto);
-    font-weight: bold;
-}
 
-.link-menu:hover {
-    color: var(--Cinza);
-}
-
-.cabecalho {
-    background-image: url("../img/stackcolaresbg.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    height: 400px;
-    background-color: var(--Preto);
-}
+/* --- Localização--- */
 
 .titulo-principal {
     color: var(--Cinza);
@@ -92,7 +148,7 @@
 /* ajustando os cards das lojas pra n ficar um branco muito forte */
 .cartao-loja {
     border: 2px solid var(--Cinza-Escuro);
-    background-color: #eaeaea;
+    background-color: #eaeaea; 
 }
 
 
@@ -111,13 +167,13 @@
     margin: 0;
 }
 
-/* --- Contato --- */
-
-.meio {
+.meio-basico {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 150px;
     margin: 50px;
 }
+
+
+/* --- Contatos --- */
+
