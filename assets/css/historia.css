@@ -12,3 +12,20 @@
     align-items: center;
     margin: 50px;
 }
+
+.meio img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsivo - história */
+@media (max-width: 768px) {
+    .letra-historia {
+        font-size: 20px;
+        margin: 15px 10px;
+    }
+
+    .meio {
+        margin: 20px 10px;
+    }
+}
