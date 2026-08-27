@@ -50,7 +50,7 @@ body {
 /* ajustando os cards das lojas pra n ficar um branco muito forte */
 .cartao-loja {
     border: 2px solid var(--Cinza-Escuro);
-    background-color: #eaeaea; 
+    background-color: #eaeaea;
 }
 
 
