@@ -1,0 +1,14 @@
+.letra-historia {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    margin: 20px;
+}
+
+.meio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
