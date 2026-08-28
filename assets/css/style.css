@@ -22,7 +22,7 @@ body {
 header {
     background-image: url("../img/stackcolaresbg.png");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
     height: 400px;
 }
@@ -32,12 +32,13 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     z-index: 1030;
-    padding: 10px;
+    padding: 10px 20px;
 }
 
 .navegador {
@@ -54,10 +55,32 @@ nav {
 .navegador a {
     color: var(--Preto);
     text-decoration: none;
+    transition: color 0.3s;
 }
 
-/* .navegador a:hover {
-} */
+.navegador a:hover {
+    color: var(--Cinza-Escuro);
+}
+
+/* Botão hamburguer - só aparece no mobile */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--Preto);
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
 
 footer {
     background-color: var(--Preto);
@@ -78,4 +101,60 @@ footer {
     list-style: none;
     text-decoration: none;
     color: var(--Cinza);
+}
+
+.redes a:hover {
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 768px) {
+
+    header {
+        height: 200px;
+        background-size: cover;
+    }
+
+    /* Mostra o botão hamburguer */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Menu escondido por padrão no mobile */
+    .navegador {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--Cinza);
+        padding: 15px 0;
+        box-shadow: 0 4px 6px var(--Transparente);
+    }
+
+    /* Quando o menu está aberto */
+    .navegador.aberto {
+        display: flex;
+    }
+
+    .navegador li {
+        padding: 10px 0;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .navegador a {
+        font-size: 18px;
+    }
+
+    footer {
+        margin-top: 30px;
+        padding: 15px;
+    }
+
+    .redes {
+        text-align: center;
+    }
 }

@@ -26,7 +26,7 @@ body {
 /* ajustando os cards das lojas pra n ficar um branco muito forte */
 .cartao-loja {
     border: 2px solid var(--Cinza-Escuro);
-    background-color: #eaeaea; 
+    background-color: #eaeaea;
 }
 
 
@@ -50,4 +50,16 @@ body {
     justify-content: center;
     align-items: center;
     margin: 50px;
+}
+
+.meio img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsivo - localização */
+@media (max-width: 768px) {
+    .meio {
+        margin: 20px 10px;
+    }
 }
