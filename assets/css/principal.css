@@ -9,7 +9,7 @@
 .grid-produtos {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(6, 15vh);
+    grid-template-columns: repeat(2, 50vh);
     /* 6 colunas */
     gap: 30px;
     max-width: 100px;
@@ -45,6 +45,116 @@ h2 {
     align-items: center;
     justify-content: center;
     margin: 50px 0 30px;
+}
+
+
+.carrossel {
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    border-radius: 25px;
+    box-sizing: border-box;
+    font-family: 'Arial Narrow', sans-serif;
+}
+
+.container-fotos {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 80px;
+}
+
+.foto-carrossel {
+    display: none;
+    width: 100%;
+    height: 400px;
+}
+
+.foto-carrossel.ativa {
+    display: block;
+}
+
+.btn-passador {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: var(--Cinza-Escuro);
+    border: none;
+    font-size: 60px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: color 0.3s;
+}
+
+.btn-passador:hover {
+    color: rgb(255, 255, 255);
+}
+
+.legenda {
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+    color: #fff;
+    text-shadow: 1px 2px 2px var(--Transparente);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.anterior {
+    left: 15px;
+}
+
+.proximo {
+    right: 15px;
+}
+
+
+/* Removido o padding para que o botão e a legenda fiquem DENTRO da imagem */
+
+
+.btn-passador:hover {
+    color: var(--Cinza);
+    /* Usando variável do root para o hover */
+}
+
+.legenda {
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+    color: var(--Cinza);
+    /* Usando variável do root */
+    text-shadow: 1px 2px 2px var(--Transparente);
+    /* Usando variável do root */
+    padding: 8px 16px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    z-index: 5;
+}
+
+/* Posicionamento das setas nas laterais, agora dentro do quadrante da imagem */
+.anterior {
+    left: 15px;
+}
+
+.proximo {
+    right: 15px;
 }
 
 /* Responsivo - produtos */
