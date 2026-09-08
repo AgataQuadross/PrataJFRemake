@@ -67,6 +67,9 @@
 }
 
 .btn-submit {
+    display: block;
+    text-align: center;
+    text-decoration: none;
     width: 100%;
     padding: 12px;
     background-color: #181818;
