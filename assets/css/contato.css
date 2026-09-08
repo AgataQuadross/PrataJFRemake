@@ -6,3 +6,12 @@
     gap: 150px;
     margin: 50px;
 }
+
+/* Responsivo - contato */
+@media (max-width: 768px) {
+    .meio {
+        flex-direction: column;
+        gap: 30px;
+        margin: 20px 15px;
+    }
+}

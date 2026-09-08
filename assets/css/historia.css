@@ -1,20 +1,8 @@
-.container-historia {
-    width: 80%;
-    margin: 40px auto;
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.letra-topo {
-    font-size: medium;
-    font-weight: bold;
-    margin: 0 0 5px 0;
-}
-
 .letra-historia {
-    font-size: small;
-    font-weight: 300;
-    margin: 0 0 1.5rem 0;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    margin: 20px;
 }
 
 .meio {
@@ -23,4 +11,21 @@
     justify-content: center;
     align-items: center;
     margin: 50px;
+}
+
+.meio img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsivo - história */
+@media (max-width: 768px) {
+    .letra-historia {
+        font-size: 20px;
+        margin: 15px 10px;
+    }
+
+    .meio {
+        margin: 20px 10px;
+    }
 }
