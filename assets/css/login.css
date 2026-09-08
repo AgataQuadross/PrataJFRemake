@@ -1,0 +1,99 @@
+.login-container {
+    min-height: calc(100vh - 200px);
+    padding-top: 80px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    background-color: var(--Cinza-Escuro);
+    color: var(--Cinza);
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--Transparente);
+}
+
+.login-card h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 1.8rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--Cinza);
+    border-radius: 4px;
+    background-color: var(--Cinza);
+    color: var(--Preto);
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: var(--Preto);
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.form-checkbox input {
+    cursor: pointer;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--Preto);
+    color: var(--Cinza);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--Transparente);
+}
+
+.login-links {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.login-links a {
+    color: var(--Cinza);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+}
