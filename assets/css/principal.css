@@ -9,7 +9,7 @@
 .grid-produtos {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(2, 50vh);
+    grid-template-columns: repeat(6, 15vh);
     /* 6 colunas */
     gap: 30px;
     max-width: 100px;

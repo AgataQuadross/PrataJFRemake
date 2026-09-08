@@ -1,3 +1,6 @@
+*{box-sizing: border-box;
+}
+
 .login-container {
     min-height: calc(100vh - 200px);
     padding-top: 80px;
@@ -8,13 +11,13 @@
 }
 
 .login-card {
-    background-color: var(--Cinza-Escuro);
-    color: var(--Cinza);
+    background-color: #ffff;
+    color: #181818;
     width: 100%;
     max-width: 400px;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px var(--Transparente);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
 }
 
 .login-card h1 {
@@ -38,17 +41,20 @@
 .form-group input[type="password"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid var(--Cinza);
-    border-radius: 4px;
-    background-color: var(--Cinza);
-    color: var(--Preto);
+    border: 1px solid #ffff;
+    border-radius: 6px;
+    background-color: #c9c9c9;
+    color: #181818;
     font-size: 1rem;
     outline: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
 }
 
 .form-group input[type="email"]:focus,
 .form-group input[type="password"]:focus {
-    border-color: var(--Preto);
+    border-color: #181818;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
 .form-checkbox {
@@ -64,20 +70,31 @@
 }
 
 .btn-submit {
+    display: block;
+    text-align: center;
+    text-decoration: none;
     width: 100%;
     padding: 12px;
-    background-color: var(--Preto);
-    color: var(--Cinza);
+    background-color: #181818;
+    color: #ffff;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease;
 }
 
 .btn-submit:hover {
-    background-color: var(--Transparente);
+    background-color: #181818;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
+    transform: translateY(-2px);
+}
+
+.btn-submit:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .login-links {
@@ -89,7 +106,7 @@
 }
 
 .login-links a {
-    color: var(--Cinza);
+    color: #181818;
     text-decoration: none;
     font-size: 0.85rem;
 }
