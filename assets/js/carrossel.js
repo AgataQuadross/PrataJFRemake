@@ -16,4 +16,4 @@ function trocarFoto() {
 }
 
 // Troca a imagem automaticamente a cada 4 segundos
-setInterval(trocarFoto, 4);
+setInterval(trocarFoto, 2000);
