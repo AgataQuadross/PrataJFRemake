@@ -1,19 +1,19 @@
-const imagens = document.querySelectorAll('.foto-carrossel');
-const btnAnterior = document.getElementById('btnAnterior');
-const btnProximo = document.getElementById('btnProximo');
+// Carrossel de fotos do header que troca sozinho
+var fotos = document.querySelectorAll('.foto-carrossel');
+var indiceAtual = 0;
 
-let indiceAtual = 0;
-
-function atualizarCarrossel(novoIndice) {
-  imagens[indiceAtual].classList.remove('ativa');
-  indiceAtual = (novoIndice + imagens.length) % imagens.length;
-  imagens[indiceAtual].classList.add('ativa');
+function trocarFoto() {
+    if (fotos.length === 0) return;
+    
+    // Remove a classe da foto atual
+    fotos[indiceAtual].classList.remove('ativa');
+    
+    // Passa para a próxima foto (volta para a primeira no final)
+    indiceAtual = (indiceAtual + 1) % fotos.length;
+    
+    // Adiciona a classe na nova foto
+    fotos[indiceAtual].classList.add('ativa');
 }
 
-btnAnterior.addEventListener('click', () => {
-  atualizarCarrossel(indiceAtual - 1);
-});
-
-btnProximo.addEventListener('click', () => {
-  atualizarCarrossel(indiceAtual + 1);
-});
+// Troca a imagem automaticamente a cada 4 segundos
+setInterval(trocarFoto, 4000);
