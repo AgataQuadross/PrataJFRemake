@@ -1,0 +1,179 @@
+/* ===== CSS DO CARRINHO (Baseado no style.css) ===== */
+
+.carrinho-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--Transparente);
+}
+
+.carrinho-container h2 {
+    text-align: center;
+    color: var(--Preto);
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Tabela de itens */
+.tabela-carrinho {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+.tabela-carrinho th {
+    background-color: var(--Cinza);
+    color: var(--Preto);
+    padding: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.tabela-carrinho td {
+    padding: 15px 12px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--Cinza);
+    color: var(--Preto);
+}
+
+/* Botões de quantidade */
+.tabela-carrinho button {
+    background-color: var(--Cinza);
+    color: var(--Preto);
+    border: 1px solid var(--Cinza-Escuro);
+    border-radius: 4px;
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.tabela-carrinho button:hover {
+    background-color: var(--Cinza-Escuro);
+    color: #ffffff;
+}
+
+.tabela-carrinho span {
+    display: inline-block;
+    min-width: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Botão de remover */
+.tabela-carrinho .btn-remover {
+    background-color: #d9534f;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    width: auto;
+    height: auto;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.tabela-carrinho .btn-remover:hover {
+    background-color: #c9302c;
+}
+
+/* Resumo e Total */
+.resumo-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid var(--Cinza);
+}
+
+.resumo-carrinho h3 {
+    font-size: 22px;
+    color: var(--Preto);
+    margin: 0;
+}
+
+.resumo-carrinho #valor-total {
+    font-weight: bold;
+    color: var(--Preto);
+}
+
+/* Botão de Finalizar */
+.btn-finalizar {
+    background-color: var(--Preto);
+    color: var(--Cinza);
+    border: none;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-finalizar:hover {
+    background-color: var(--Cinza-Escuro);
+    color: #ffffff;
+}
+
+/* Mensagem de carrinho vazio */
+#carrinho-vazio {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#carrinho-vazio p {
+    font-size: 20px;
+    color: var(--Cinza-Escuro);
+    margin-bottom: 20px;
+}
+
+#carrinho-vazio a {
+    display: inline-block;
+    background-color: var(--Preto);
+    color: var(--Cinza);
+    padding: 10px 22px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#carrinho-vazio a:hover {
+    background-color: var(--Cinza-Escuro);
+    color: #ffffff;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    .carrinho-container {
+        margin: 20px 15px;
+        padding: 20px 15px;
+    }
+
+    .tabela-carrinho {
+        font-size: 14px;
+    }
+
+    .tabela-carrinho th,
+    .tabela-carrinho td {
+        padding: 8px 5px;
+    }
+
+    .resumo-carrinho {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .btn-finalizar {
+        width: 100%;
+    }
+}
