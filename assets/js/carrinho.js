@@ -1,5 +1,5 @@
 // Pega os itens do carrinho salvos ou inicia vazio
-var carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
 // Atualiza a tela quando a página carrega
 window.onload = function() {
@@ -8,11 +8,11 @@ window.onload = function() {
 
 // Mostra os produtos na tabela e calcula o total
 function renderizarCarrinho() {
-    var tabela = document.getElementById('itens-carrinho');
-    var totalSpan = document.getElementById('valor-total');
-    var carrinhoVazio = document.getElementById('carrinho-vazio');
-    var carrinhoConteudo = document.getElementById('carrinho-conteudo');
-    var total = 0;
+    const tabela = document.getElementById('itens-carrinho');
+    const totalSpan = document.getElementById('valor-total');
+    const carrinhoVazio = document.getElementById('carrinho-vazio');
+    const carrinhoConteudo = document.getElementById('carrinho-conteudo');
+    let total = 0;
 
     if (carrinho.length === 0) {
         carrinhoVazio.style.display = 'block';
@@ -24,9 +24,9 @@ function renderizarCarrinho() {
     carrinhoConteudo.style.display = 'block';
     tabela.innerHTML = '';
 
-    for (var i = 0; i < carrinho.length; i++) {
-        var item = carrinho[i];
-        var subtotal = item.preco * item.quantidade;
+    for (let i = 0; i < carrinho.length; i++) {
+        const item = carrinho[i];
+        const subtotal = item.preco * item.quantidade;
         total += subtotal;
 
         tabela.innerHTML += `
