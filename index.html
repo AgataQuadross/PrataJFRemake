@@ -1,18 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Entrar na Conta - Prata JF</title>
+    <script src="https://kit.fontawesome.com/7d729e43cb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/login.css">
 </head>
+
 <body>
 
     <main class="login-container">
         <section class="login-card">
+            <div class="login-logo">
+                <a href="principal.html" title="Prata JF"><img src="assets/img/PRATA_JF_LOGO_100px.png" alt="Logo Prata JF"></a>
+            </div>
+
             <h1>Entrar na Conta</h1>
 
-            <form action="principal.html" method="POST">
+            <form action="principal.html" method="GET">
                 <div class="form-group">
                     <label for="email">E-mail</label>
                     <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
@@ -28,12 +36,13 @@
                     <label for="lembrar">Lembrar de mim</label>
                 </div>
 
-                <a href="principal.html" class="btn-submit">Entrar</a>
+                <button type="submit" class="btn-submit">Entrar</button>
             </form>
 
             <div class="login-links">
-                <a href="/recuperar-senha">Esqueceu a senha?</a>
-                <a href="/cadastro">Ainda não tem uma conta? Cadastre-se</a>
+                <a href="recuperacao.html">Esqueceu a senha?</a>
+                <a href="cadastro.html" class="link-destaque">Ainda não tem uma conta? Cadastre-se</a>
+                <a href="principal.html" class="link-voltar"><i class="fa-solid fa-arrow-left"></i> Continuar navegando na loja</a>
             </div>
         </section>
     </main>
@@ -43,4 +52,5 @@
     </footer>
 
 </body>
+
 </html>

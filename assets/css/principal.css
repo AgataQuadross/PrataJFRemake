@@ -108,36 +108,11 @@ h2 {
 }
 
 /* ========================================================
-   MODAL POP-UP DO PRODUTO & CONTADOR DE CARRINHO
+   MODAL POP-UP DO PRODUTO
    ======================================================== */
 
 body.modal-aberto {
     overflow: hidden;
-}
-
-/* Badge do Carrinho no Nav */
-.link-carrinho {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-}
-
-.carrinho-contador {
-    position: absolute;
-    top: -8px;
-    right: -10px;
-    background-color: #d9534f;
-    color: #ffffff;
-    font-size: 11px;
-    font-weight: 700;
-    min-width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 4px;
-    border: 2px solid var(--Cinza);
 }
 
 /* Overlay do Modal */
