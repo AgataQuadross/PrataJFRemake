@@ -30,6 +30,7 @@
     align-items: center;
     justify-content: center;
     transition: transform 0.3s;
+    cursor: pointer;
 }
 
 .view-produto:hover {
@@ -114,5 +115,403 @@ h2 {
     .view-produto img {
         height: 90px;
         width: 90px;
+    }
+}
+
+/* ========================================================
+   MODAL POP-UP DO PRODUTO
+   ======================================================== */
+
+body.modal-aberto {
+    overflow: hidden;
+}
+
+/* Overlay do Modal */
+.produto-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(18, 18, 18, 0.75);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.produto-modal-overlay.ativo {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Card do Modal */
+.produto-modal-card {
+    background-color: #ffffff;
+    border-radius: 18px;
+    max-width: 780px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+    transform: scale(0.92) translateY(20px);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.produto-modal-overlay.ativo .produto-modal-card {
+    transform: scale(1) translateY(0);
+}
+
+/* Botão Fechar */
+.btn-modal-fechar {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.06);
+    color: var(--Preto);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-modal-fechar:hover {
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+/* Coluna da Imagem */
+.modal-coluna-img {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 25px;
+    position: relative;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+
+.modal-img-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-img-container img {
+    max-width: 100%;
+    max-height: 280px;
+    object-fit: contain;
+    border-radius: 12px;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+}
+
+.modal-img-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Coluna de Informações */
+.modal-coluna-info {
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-badge-categoria {
+    display: inline-block;
+    background-color: #f1f3f5;
+    color: var(--Cinza-Escuro);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+    align-self: flex-start;
+}
+
+.modal-titulo {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--Preto);
+    margin-bottom: 12px;
+    line-height: 1.25;
+}
+
+.modal-bloco-preco {
+    margin-bottom: 14px;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 12px;
+}
+
+.modal-preco {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--Preto);
+    line-height: 1;
+}
+
+.modal-parcela {
+    font-size: 13px;
+    color: #6c757d;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
+.modal-descricao {
+    font-size: 14px;
+    color: #495057;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.modal-beneficios {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #495057;
+}
+
+.modal-beneficios span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal-beneficios i {
+    color: #2b8a3e;
+}
+
+/* Seletor de Quantidade */
+.modal-linha-qtd {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.modal-linha-qtd label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--Preto);
+}
+
+.seletor-qtd {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.seletor-qtd button {
+    background-color: #f8f9fa;
+    border: none;
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--Preto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.seletor-qtd button:hover {
+    background-color: #e9ecef;
+}
+
+.seletor-qtd input {
+    width: 44px;
+    height: 34px;
+    border: none;
+    border-left: 1px solid #ced4da;
+    border-right: 1px solid #ced4da;
+    text-align: center;
+    font-weight: 600;
+    color: var(--Preto);
+    outline: none;
+}
+
+.seletor-qtd input::-webkit-outer-spin-button,
+.seletor-qtd input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Botões de Ação */
+.modal-acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-modal-add {
+    background-color: var(--Preto);
+    color: #ffffff;
+    border: none;
+    padding: 13px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(24, 24, 24, 0.2);
+    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-modal-add:hover {
+    background-color: #333333;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(24, 24, 24, 0.25);
+}
+
+.btn-modal-continuar {
+    background-color: transparent;
+    color: var(--Preto);
+    border: 1px solid #ced4da;
+    padding: 11px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-modal-continuar:hover {
+    background-color: #f8f9fa;
+    border-color: #adb5bd;
+}
+
+/* Toast de confirmação */
+.modal-toast {
+    display: none;
+    margin-top: 14px;
+    background-color: #ebfbee;
+    border: 1px solid #b2f2bb;
+    color: #2b8a3e;
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 13px;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-toast.visivel {
+    display: block;
+}
+
+.modal-toast-mensagem {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.modal-toast-botoes {
+    display: flex;
+    gap: 8px;
+}
+
+.modal-toast-botoes a,
+.modal-toast-botoes button {
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-toast-ir-carrinho {
+    background-color: #2b8a3e;
+    color: #ffffff !important;
+}
+
+.btn-toast-ir-carrinho:hover {
+    background-color: #237032;
+}
+
+.btn-toast-continuar {
+    background-color: transparent;
+    color: #2b8a3e;
+    border: 1px solid #2b8a3e !important;
+}
+
+.btn-toast-continuar:hover {
+    background-color: rgba(43, 138, 62, 0.08);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsivo para o Modal */
+@media (max-width: 768px) {
+    .produto-modal-card {
+        grid-template-columns: 1fr;
+        max-height: 85vh;
+    }
+
+    .modal-coluna-img {
+        padding: 25px 20px;
+        border-top-right-radius: 18px;
+        border-bottom-left-radius: 0;
+    }
+
+    .modal-img-container img {
+        max-height: 180px;
+    }
+
+    .modal-coluna-info {
+        padding: 20px;
+    }
+
+    .modal-titulo {
+        font-size: 19px;
+    }
+
+    .modal-preco {
+        font-size: 22px;
     }
 }

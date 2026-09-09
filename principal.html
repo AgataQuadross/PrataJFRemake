@@ -13,7 +13,7 @@
 
 <body>
     <nav>
-        <a href="index.html"><img src="assets/img/PRATA_JF_LOGO_100px.png" alt="logo/botão de retorno, Prata jf"></a>
+        <a href="principal.html"><img src="assets/img/PRATA_JF_LOGO_100px.png" alt="logo/botão de retorno, Prata jf"></a>
         <button class="menu-toggle" onclick="toggleMenu()">
             <span></span>
             <span></span>
@@ -24,7 +24,9 @@
             <li><a href="conta.html"><i class="fa-regular fa-user"></i></a></li>
             <li><a href="contato.html"><i class="fa-solid fa-phone"></i></a></li>
             <li><a href="localizacao.html"><i class="fa-solid fa-location-dot"></i></a></li>
-            <li><a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="carrinho.html" class="link-carrinho" title="Ver Carrinho"><i
+                        class="fa-solid fa-cart-shopping"></i><span class="carrinho-contador" id="cart-count"
+                        style="display: none;">0</span></a></li>
         </ul>
     </nav>
     <header class="header-carrossel">
@@ -36,28 +38,210 @@
     <main>
         <h2>Produtos</h2>
         <section class="grid-produtos">
-            <a class="view-produto" href=""><img src="assets/img/aneis/anel_1.webp" alt="" id="anel"></a>
-            <a class="view-produto" href=""><img src="assets/img/pulseiras/pulseira_1.jpg" alt="" id="pulceira"></a>
-            <a class="view-produto" href=""><img src="assets/img/aneis/anel_2.webp" alt="" id="anel"></a>
-            <a class="view-produto" href=""><img src="assets/img/pingentes/pingente_3.webp" alt="" id="pingente"></a>
-            <a class="view-produto" href=""><img src="assets/img/pulseiras/pulseira_3.jpg" alt="" id="pulceira"></a>
-            <a class="view-produto" href=""><img src="assets/img/colares/colar_1.webp" alt="" id="colar"></a>
-            <a class="view-produto" href=""><img src="assets/img/aneis/anel_3.webp" alt="" id="anel"></a>
-            <a class="view-produto" href=""><img src="assets/img/brincos/brinco_1.webp" alt="" id="brinco"></a>
-            <a class="view-produto" href=""><img src="assets/img/pulseiras/pulseira_3.webp" alt="" id="pulceira"></a>
-            <a class="view-produto" href=""><img src="assets/img/brincos/brinco_2.webp" alt="" id="brinco"></a>
-            <a class="view-produto" href=""><img src="assets/img/colares/colar_2.webp" alt="" id="colar"></a>
-            <a class="view-produto" href=""><img src="assets/img/aneis/anel_4.webp" alt="" id="anel"></a>
-            <a class="view-produto" href=""><img src="assets/img/brincos/brinco_3.jpg" alt="" id="brinco"></a>
-            <a class="view-produto" href=""><img src="assets/img/pingentes/pingente_4.webp" alt="" id="pingente"></a>
-            <a class="view-produto" href=""><img src="assets/img/colares/colar_3.jpg" alt="" id="colar"></a>
-            <a class="view-produto" href=""><img src="assets/img/brincos/brinco_4.webp" alt="" id="brinco"></a>
-            <a class="view-produto" href=""><img src="assets/img/pulseiras/pulseira_4.webp" alt="" id="pulceira"></a>
-            <a class="view-produto" href=""><img src="assets/img/pingentes/pingente_1.webp" alt="" id="pingente"></a>
-            <a class="view-produto" href=""><img src="assets/img/colares/colar_4.webp" alt="" id="colar"></a>
-            <a class="view-produto" href=""><img src="assets/img/pingentes/pingente_2.webp" alt="" id="pingente"></a>
+            <a class="view-produto" href="javascript:void(0)" data-nome="Anel Solitário Zircônia Prata 925"
+                data-preco="119.90" data-categoria="Anéis"
+                data-descricao="Anel solitário clássico em Prata 925 legítima com pedra zircônia cúbica lapidada com brilho intenso e acabamento polido."
+                data-imagem="assets/img/aneis/anel_1.webp">
+                <img src="assets/img/aneis/anel_1.webp" alt="Anel Solitário Zircônia Prata 925" id="anel">
+            </a>
+
+            <a class="view-produto" href="javascript:void(0)" data-nome="Pulseira Grumet Prata 925" data-preco="189.90"
+                data-categoria="Pulseiras"
+                data-descricao="Pulseira em malha Grumet unissex confeccionada em Prata 925 legítima com fecho gaveta reforçado e banho de proteção anti-oxidação."
+                data-imagem="assets/img/pulseiras/pulseira_1.jpg">
+                <img src="assets/img/pulseiras/pulseira_1.jpg" alt="Pulseira Grumet Prata 925" id="pulseira">
+            </a>
+
+            <a class="view-produto" href="javascript:void(0)" data-nome="Anel Falange Corações Prata 925"
+                data-preco="89.90" data-categoria="Anéis"
+                data-descricao="Design romântico e delicado com fileira de corações vazados em Prata 925 de altíssimo brilho. Perfeito para combinações."
+                data-imagem="assets/img/aneis/anel_2.webp">
+                <img src="assets/img/aneis/anel_2.webp" alt="Anel Falange Corações Prata 925" id="anel">
+            </a>
+
+            <a class="view-produto" href="javascript:void(0)" data-nome="Pingente Cruz Polida Prata 925"
+                data-preco="69.90" data-categoria="Pingentes"
+                data-descricao="Pingente tradicional de cruz em Prata 925 com acabamento espelhado e passador resistente compatível com diversos colares."
+                data-imagem="assets/img/pingentes/pingente_3.webp">
+                <img src="assets/img/pingentes/pingente_3.webp" alt="Pingente Cruz Polida Prata 925" id="pingente">
+            </a>
+
+            <a class="view-produto" href="javascript:void(0)" data-nome="Pulseira Elos Ovais Prata 925"
+                data-preco="149.90" data-categoria="Pulseiras"
+                data-descricao="Pulseira sofisticada com elos ovais entrelaçados em Prata 925 com fecho boia de fácil engate e alta durabilidade."
+                data-imagem="assets/img/pulseiras/pulseira_3.jpg">
+                <img src="assets/img/pulseiras/pulseira_3.jpg" alt="Pulseira Elos Ovais Prata 925" id="pulseira">
+            </a>
+
+            <a class="view-produto" href="javascript:void(0)" data-nome="Colar Ponto de Luz Prata 925"
+                data-preco="129.90" data-categoria="Colares"
+                data-descricao="Colar veneziana 45cm com delicado pingente ponto de luz em zircônia suíça cravejada em cápsula de Prata 925 legítima."
+                data-imagem="assets/img/colares/colar_1.webp">
+                <img src="assets/img/colares/colar_1.webp" alt="Colar Ponto de Luz Prata 925" id="colar">
+            </a>
+
+            <a class="view-produto" href="javascript:void(0)" data-nome="Anel Floral Bali Prata 925" data-preco="139.90"
+                data-categoria="Anéis"
+                data-descricao="Anel em estilo artesanal Bali com relevos florais e detalhe envelhecido característico em Prata de Lei 925."
+                data-imagem="assets/img/aneis/anel_3.webp">
+                <img src="assets/img/aneis/anel_3.webp" alt="Anel Floral Bali Prata 925" id="anel">
+            </a>
+
+            <a class="view-produto" href="javascript:void(0)" data-nome="Brinco Argola Articulada Prata 925"
+                data-preco="79.90" data-categoria="Brincos"
+                data-descricao="Argola clássica de tamanho médio com fecho de encaixe prático e seguro, ideal para uso no dia a dia com total conforto."
+                data-imagem="assets/img/brincos/brinco_1.webp">
+                <img src="assets/img/brincos/brinco_1.webp" alt="Brinco Argola Articulada Prata 925" id="brinco">
+            </a>
+
+            <a class="view-produto" href="javascript:void(0)" data-nome="Pulseira Cordão Baiano Prata 925"
+                data-preco="169.90" data-categoria="Pulseiras"
+                data-descricao="Pulseira trançada estilo cordão baiano que reflete luminosidade radiante, manufaturada em Prata 925 maciça."
+                data-imagem="assets/img/pulseiras/pulseira_3.webp">
+                <img src="assets/img/pulseiras/pulseira_3.webp" alt="Pulseira Cordão Baiano Prata 925" id="pulseira">
+            </a>
+
+            <a class="view-produto" href="javascript:void(0)" data-nome="Brinco Ponto de Luz Zircônia Prata 925"
+                data-preco="59.90" data-categoria="Brincos"
+                data-descricao="Par de brincos clássicos com zircônias redondas e tarrachas tipo borboleta com pressão suave e confortável."
+                data-imagem="assets/img/brincos/brinco_2.webp">
+                <img src="assets/img/brincos/brinco_2.webp" alt="Brinco Ponto de Luz Zircônia Prata 925" id="brinco">
+            </a>
+
+            <a class="view-produto" href="javascript:void(0)" data-nome="Colar Gravatinha com Coração Prata 925"
+                data-preco="159.90" data-categoria="Colares"
+                data-descricao="Colar longo modelo gravata ajustável com caimento moderno e delicado pingente de coração em Prata 925."
+                data-imagem="assets/img/colares/colar_2.webp">
+                <img src="assets/img/colares/colar_2.webp" alt="Colar Gravatinha com Coração Prata 925" id="colar">
+            </a>
+
+            <a class="view-produto" href="javascript:void(0)" data-nome="Anel Folhas Regulável Prata 925"
+                data-preco="99.90" data-categoria="Anéis"
+                data-descricao="Anel aberto ajustável inspirado na natureza com folhas polidas e formato anatômico em Prata 925."
+                data-imagem="assets/img/aneis/anel_4.webp">
+                <img src="assets/img/aneis/anel_4.webp" alt="Anel Folhas Regulável Prata 925" id="anel">
+            </a>
+
+            <a class="view-produto" href="javascript:void(0)" data-nome="Brinco Cascata Longo Prata 925"
+                data-preco="119.90" data-categoria="Brincos"
+                data-descricao="Brinco elegante em fios de Prata 925 com movimento fluido, ideal para eventos e produções sofisticadas."
+                data-imagem="assets/img/brincos/brinco_3.jpg">
+                <img src="assets/img/brincos/brinco_3.jpg" alt="Brinco Cascata Longo Prata 925" id="brinco">
+            </a>
+
+            <a class="view-produto" href="javascript:void(0)" data-nome="Pingente Árvore da Vida Prata 925"
+                data-preco="79.90" data-categoria="Pingentes"
+                data-descricao="Pingente circular medalha com corte vazado de precisão da Árvore da Vida, símbolo de renascimento e força."
+                data-imagem="assets/img/pingentes/pingente_4.webp">
+                <img src="assets/img/pingentes/pingente_4.webp" alt="Pingente Árvore da Vida Prata 925" id="pingente">
+            </a>
+
+            <a class="view-produto" href="javascript:void(0)" data-nome="Colar Duplo Boho Medalhas Prata 925"
+                data-preco="179.90" data-categoria="Colares"
+                data-descricao="Composição com duas correntes em Prata 925 em comprimentos harmoniosos com medalhinhas lisas polidas."
+                data-imagem="assets/img/colares/colar_3.jpg">
+                <img src="assets/img/colares/colar_3.jpg" alt="Colar Duplo Boho Medalhas Prata 925" id="colar">
+            </a>
+
+            <a class="view-produto" href="javascript:void(0)" data-nome="Brinco Argola Cravejada Prata 925"
+                data-preco="109.90" data-categoria="Brincos"
+                data-descricao="Argola moderna com fileira frontal de microzircônias brancas cravadas à mão sobre base de Prata 925 legítima."
+                data-imagem="assets/img/brincos/brinco_4.webp">
+                <img src="assets/img/brincos/brinco_4.webp" alt="Brinco Argola Cravejada Prata 925" id="brinco">
+            </a>
+
+            <a class="view-produto" href="javascript:void(0)" data-nome="Pulseira Riviera Zircônias Prata 925"
+                data-preco="229.90" data-categoria="Pulseiras"
+                data-descricao="Pulseira Riviera com articulação flexível de pedras zircônia 2mm montadas em garras individuais de Prata 925."
+                data-imagem="assets/img/pulseiras/pulseira_4.webp">
+                <img src="assets/img/pulseiras/pulseira_4.webp" alt="Pulseira Riviera Zircônias Prata 925"
+                    id="pulseira">
+            </a>
+
+            <a class="view-produto" href="javascript:void(0)" data-nome="Pingente Mini Coração Liso Prata 925"
+                data-preco="59.90" data-categoria="Pingentes"
+                data-descricao="Pingente minimalista de coração cheio em prata lisa com alto polimento espelhado e garantia vitalícia."
+                data-imagem="assets/img/pingentes/pingente_1.webp">
+                <img src="assets/img/pingentes/pingente_1.webp" alt="Pingente Mini Coração Liso Prata 925"
+                    id="pingente">
+            </a>
+
+            <a class="view-produto" href="javascript:void(0)" data-nome="Choker Fita Laminada 40cm Prata 925"
+                data-preco="199.90" data-categoria="Colares"
+                data-descricao="Gargantilha estilo malha fita laminada 3mm que veste com perfeito caimento ao redor do pescoço em Prata 925."
+                data-imagem="assets/img/colares/colar_4.webp">
+                <img src="assets/img/colares/colar_4.webp" alt="Choker Fita Laminada 40cm Prata 925" id="colar">
+            </a>
+
+            <a class="view-produto" href="javascript:void(0)" data-nome="Pingente Medalha Inicial Prata 925"
+                data-preco="69.90" data-categoria="Pingentes"
+                data-descricao="Pingente de medalha redonda com gravação laser nítida e aro reforçado em Prata 925 autêntica."
+                data-imagem="assets/img/pingentes/pingente_2.webp">
+                <img src="assets/img/pingentes/pingente_2.webp" alt="Pingente Medalha Inicial Prata 925" id="pingente">
+            </a>
         </section>
     </main>
+
+    <!-- Modal Pop-up do Produto -->
+    <div id="modal-produto" class="produto-modal-overlay" aria-hidden="true" role="dialog">
+        <div class="produto-modal-card">
+            <button type="button" class="btn-modal-fechar" id="btn-modal-fechar" title="Fechar modal">&times;</button>
+
+            <div class="modal-coluna-img">
+                <div class="modal-img-container">
+                    <img id="modal-img" src="" alt="Produto">
+                </div>
+            </div>
+
+            <div class="modal-coluna-info">
+                <span class="modal-badge-categoria" id="modal-categoria">Prata 925</span>
+                <h3 class="modal-titulo" id="modal-titulo">Nome do Produto</h3>
+
+                <div class="modal-bloco-preco">
+                    <div class="modal-preco" id="modal-preco">R$ 0,00</div>
+                    <p class="modal-parcela" id="modal-parcela">ou até 3x sem juros</p>
+                </div>
+
+                <p class="modal-descricao" id="modal-descricao"></p>
+
+                <div class="modal-beneficios">
+                    <span><i class="fa-solid fa-circle-check"></i> Prata 925 legítima (garantia vitalícia do
+                        metal)</span>
+                </div>
+
+                <div class="modal-linha-qtd">
+                    <label for="modal-qtd">Quantidade:</label>
+                    <div class="seletor-qtd">
+                        <button type="button" id="btn-modal-menos" title="Diminuir quantidade">-</button>
+                        <input type="number" id="modal-qtd" value="1" min="1" max="99" readonly>
+                        <button type="button" id="btn-modal-mais" title="Aumentar quantidade">+</button>
+                    </div>
+                </div>
+
+                <div class="modal-acoes">
+                    <button type="button" class="btn-modal-add" id="btn-modal-add-carrinho">
+                        <i class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho
+                    </button>
+                    <button type="button" class="btn-modal-continuar" id="btn-modal-continuar">
+                        <i class="fa-solid fa-arrow-left"></i> Continuar Comprando
+                    </button>
+                </div>
+
+                <!-- Notificação de confirmação interativa -->
+                <div id="modal-toast" class="modal-toast">
+                    <div class="modal-toast-mensagem">
+                        <i class="fa-solid fa-circle-check"></i> Produto adicionado ao carrinho!
+                    </div>
+                    <div class="modal-toast-botoes">
+                        <a href="carrinho.html" class="btn-toast-ir-carrinho">Ir para o Carrinho</a>
+                        <button type="button" class="btn-toast-continuar"
+                            onclick="document.getElementById('btn-modal-continuar').click()">Continuar
+                            Comprando</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; Todos os direitos reservados.</p>
@@ -66,6 +250,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/funcionalidades.js"></script>
     <script src="assets/js/carrossel.js"></script>
+    <script src="assets/js/produto-modal.js"></script>
 </body>
 
 </html>
