@@ -18,7 +18,7 @@
 
 .view-produto {
     border: none;
-    border-radius: 50%;
+    border-radius: 40%;
     height: 130px;
     width: 130px;
     text-decoration: none;
@@ -39,7 +39,7 @@
 .view-produto img {
     height: 130px;
     text-align: center;
-    border-radius: 50%;
+    border-radius: 40%;
     object-fit: cover;
 }
 
