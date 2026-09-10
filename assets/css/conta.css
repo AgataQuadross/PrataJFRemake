@@ -241,13 +241,6 @@ body {
     color: var(--Cinza-Escuro);
 }
 
-footer {
-    background-color: var(--Branco);
-    text-align: center;
-    padding: 20px;
-    margin-top: auto;
-    border-top: 1px solid var(--Cinza);
-}
 
 @media (max-width: 768px) {
     .header-container {

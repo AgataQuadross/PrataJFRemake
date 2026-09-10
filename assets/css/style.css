@@ -146,6 +146,19 @@ footer {
     text-decoration: underline;
 }
 
+.meio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.meio img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* ===== RESPONSIVO ===== */
 
 @media (max-width: 768px) {
