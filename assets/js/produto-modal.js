@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnMenos = document.getElementById('btn-modal-menos');
     const btnMais = document.getElementById('btn-modal-mais');
     const btnAddCarrinho = document.getElementById('btn-modal-add-carrinho');
+    const btnModalFavoritar = document.getElementById('btn-modal-favoritar');
     const btnContinuar = document.getElementById('btn-modal-continuar');
     const btnFechar = document.getElementById('btn-modal-fechar');
     const toast = document.getElementById('modal-toast');
@@ -63,6 +64,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         modalDescricao.textContent = descricao;
         inputQtd.value = 1;
+
+        // Atualiza o estado do botão de favorito no modal
+        if (btnModalFavoritar && typeof produtoEstaFavoritado === 'function') {
+            btnModalFavoritar.setAttribute('data-nome-produto', nome);
+            if (produtoEstaFavoritado(nome)) {
+                btnModalFavoritar.classList.add('ativo');
+                btnModalFavoritar.innerHTML = '<i class="fa-solid fa-heart"></i> Favoritado';
+            } else {
+                btnModalFavoritar.classList.remove('ativo');
+                btnModalFavoritar.innerHTML = '<i class="fa-regular fa-heart"></i> Favoritar';
+            }
+        }
 
         // Esconde toast caso estivesse aberto
         if (toast) toast.classList.remove('visivel');
@@ -142,6 +155,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (btnAddCarrinho) {
         btnAddCarrinho.addEventListener('click', adicionarAoCarrinho);
+    }
+
+    if (btnModalFavoritar) {
+        btnModalFavoritar.addEventListener('click', () => {
+            if (!produtoAtivo || typeof alternarFavorito !== 'function') return;
+            alternarFavorito(null, btnModalFavoritar, {
+                nome: produtoAtivo.nome,
+                preco: produtoAtivo.preco,
+                imagem: produtoAtivo.imagem,
+                categoria: modalCategoria ? modalCategoria.textContent : 'Prata 925',
+                descricao: modalDescricao ? modalDescricao.textContent : ''
+            });
+            if (typeof produtoEstaFavoritado === 'function') {
+                if (produtoEstaFavoritado(produtoAtivo.nome)) {
+                    btnModalFavoritar.classList.add('ativo');
+                    btnModalFavoritar.innerHTML = '<i class="fa-solid fa-heart"></i> Favoritado';
+                } else {
+                    btnModalFavoritar.classList.remove('ativo');
+                    btnModalFavoritar.innerHTML = '<i class="fa-regular fa-heart"></i> Favoritar';
+                }
+            }
+        });
     }
 
     // Botão Continuar Comprando (fecha o modal)

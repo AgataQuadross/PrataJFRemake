@@ -77,7 +77,35 @@ function finalizarCompra() {
         alert("Seu carrinho está vazio!");
         return;
     }
-    alert("Compra finalizada com sucesso!");
+
+    // Registra o pedido no histórico de compras da conta
+    try {
+        const historico = JSON.parse(localStorage.getItem('historicoCompras')) || [];
+        const dataHoje = new Date().toLocaleDateString('pt-BR');
+        const numeroAleatorio = Math.floor(1000 + Math.random() * 9000);
+        const totalPedido = carrinho.reduce((acc, item) => acc + (item.preco * item.quantidade), 0);
+
+        const novoPedido = {
+            numero: `#PJF-${numeroAleatorio}`,
+            data: dataHoje,
+            status: 'Preparando',
+            tipoStatus: 'preparando',
+            total: totalPedido,
+            itens: carrinho.map(item => ({
+                nome: item.nome,
+                qtd: item.quantidade,
+                preco: item.preco,
+                img: item.imagem || 'assets/img/PRATA_JF_LOGO_100px.png'
+            }))
+        };
+
+        historico.unshift(novoPedido);
+        localStorage.setItem('historicoCompras', JSON.stringify(historico));
+    } catch (erro) {
+        console.error('Erro ao registrar histórico:', erro);
+    }
+
+    alert("Compra finalizada com sucesso! Seu pedido foi registrado no seu histórico.");
     carrinho = [];
     salvarCarrinho();
     renderizarCarrinho();
