@@ -9,7 +9,7 @@
     padding: 0 20px;
 }
 
-.form-group label {
+.grupo-formulario label {
     font-weight: 600;
     margin-top: 12px;
     margin-bottom: 6px;
@@ -17,24 +17,24 @@
     color: var(--Preto);
 }
 
-.form-group .form-control {
+.grupo-formulario .campo-formulario {
     border-radius: 8px;
     border: 1px solid var(--Cinza-Escuro);
     padding: 10px 14px;
 }
 
-.form-group .form-control:focus {
+.grupo-formulario .campo-formulario:focus {
     border-color: var(--Preto);
     box-shadow: 0 0 0 0.25rem rgba(24, 24, 24, 0.15);
 }
 
-.form-group textarea.form-control {
+.grupo-formulario textarea.campo-formulario {
     min-height: 120px;
     resize: vertical;
 }
 
-.form-group .btn-primary,
-.form-group .btn-enviar-contato {
+.grupo-formulario .botao-primario,
+.grupo-formulario .botao-enviar-contato {
     background-color: var(--Preto) !important;
     border-color: var(--Preto) !important;
     color: #ffffff !important;
@@ -46,8 +46,8 @@
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.form-group .btn-primary:hover,
-.form-group .btn-enviar-contato:hover {
+.grupo-formulario .botao-primario:hover,
+.grupo-formulario .botao-enviar-contato:hover {
     background-color: #333333 !important;
     border-color: #333333 !important;
     transform: translateY(-2px);
@@ -60,4 +60,4 @@
         gap: 30px;
         margin: 20px 15px;
     }
-}
+}

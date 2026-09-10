@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Vincular clique aos cards de produto do grid
-    const produtos = document.querySelectorAll('.grid-produtos .view-produto');
+    const produtos = document.querySelectorAll('.grade-produtos .visualizar-produto');
     produtos.forEach((prod) => {
         prod.addEventListener('click', (e) => {
             e.preventDefault();

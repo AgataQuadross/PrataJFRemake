@@ -40,7 +40,7 @@ function renderizarCarrinho() {
                 </td>
                 <td>R$ ${subtotal.toFixed(2)}</td>
                 <td>
-                    <button class="btn-remover" onclick="removerItem(${i})">X</button>
+                    <button class="botao-remover" onclick="removerItem(${i})">X</button>
                 </td>
             </tr>
         `;
