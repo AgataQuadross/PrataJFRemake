@@ -11,27 +11,24 @@
 </head>
 
 <body>
-    <div class="top-bar"></div>
-    <header class="main-header">
-        <div class="header-container">
-            <div class="logo">
-                <a href="principal.html">
-                    <img src="assets/img/PRATA_JF_LOGO_100px.png" alt="PRATA jf">
-                </a>
-            </div>
-
-            <button class="mobile-menu-toggle" aria-label="Abrir menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
-            <nav class="header-icons">
-                <a href="principal.html" title="Voltar"><i class="fa-solid fa-arrow-left"></i></a>
-                <a href="historia.html" title="História / Notícias"><i class="fa-regular fa-newspaper"></i></a>
-                <a href="localizacao.html" title="Localização"><i class="fa-solid fa-location-dot"></i></a>
-                <a href="carrinho.html" title="Carrinho"><i class="fa-solid fa-cart-shopping"></i></a>
-            </nav>
-        </div>
-    </header>
+    <nav>
+        <a href="principal.html"><img src="assets/img/PRATA_JF_LOGO_100px.png"
+                alt="logo/botão de retorno, Prata jf"></a>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="navegador">
+            <li><a href="historia.html"><i class="fa-regular fa-newspaper"></i></a></li>
+            <li><a href="conta.html"><i class="fa-regular fa-user"></i></a></li>
+            <li><a href="contato.html"><i class="fa-solid fa-phone"></i></a></li>
+            <li><a href="localizacao.html"><i class="fa-solid fa-location-dot"></i></a></li>
+            <li><a href="carrinho.html" class="link-carrinho" title="Ver Carrinho"><i
+                        class="fa-solid fa-cart-shopping"></i><span class="carrinho-contador" id="cart-count"
+                        style="display: none;">0</span></a></li>
+        </ul>
+    </nav>
 
     <main class="account-container">
         <aside class="account-sidebar">
