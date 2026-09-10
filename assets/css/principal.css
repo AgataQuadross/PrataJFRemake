@@ -5,6 +5,13 @@
     --Transparente: #18181880;
 }
 
+/* Navigation logo size */
+nav a img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
 
 .grid-produtos {
     display: grid;

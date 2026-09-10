@@ -135,7 +135,9 @@ footer {
     color: var(--Cinza);
 }
 
-.redes, .redes a, .redes li{
+.redes,
+.redes a,
+.redes li {
     margin: 8px;
     list-style: none;
     text-decoration: none;
@@ -220,4 +222,11 @@ footer {
 
 .foto-carrossel.ativa {
     opacity: 1;
+}
+
+/* Navigation logo size */
+nav a img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
 }
