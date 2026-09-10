@@ -18,7 +18,7 @@
     height: auto;
 }
 
-/* Responsivo - história */
+
 @media (max-width: 768px) {
     .letra-historia {
         font-size: 20px;
