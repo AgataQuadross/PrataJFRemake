@@ -5,15 +5,15 @@
     --Transparente: #18181880;
 }
 
-/* Navigation logo size */
-nav a img {
+/* Tamanho da logo */
+.logo-container img {
     height: 80px;
     width: auto;
     object-fit: contain;
 }
 
 
-.grid-produtos {
+.grade-produtos {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(6, 15vh);
@@ -23,7 +23,7 @@ nav a img {
     margin: auto;
 }
 
-.view-produto {
+.visualizar-produto {
     border: none;
     border-radius: 40%;
     height: 130px;
@@ -40,11 +40,11 @@ nav a img {
     cursor: pointer;
 }
 
-.view-produto:hover {
+.visualizar-produto:hover {
     transform: scale(1.1)
 }
 
-.view-produto img {
+.visualizar-produto img {
     height: 130px;
     text-align: center;
     border-radius: 40%;
@@ -60,7 +60,7 @@ h2 {
 
 
 /* Carrossel automático do Header */
-.header-carrossel {
+.cabecalho-carrossel {
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -85,17 +85,17 @@ h2 {
 
 /* Responsivo - produtos */
 @media (max-width: 768px) {
-    .grid-produtos {
+    .grade-produtos {
         grid-template-columns: repeat(3, 12vh);
         gap: 15px;
     }
 
-    .view-produto {
+    .visualizar-produto {
         height: 90px;
         width: 90px;
     }
 
-    .view-produto img {
+    .visualizar-produto img {
         height: 90px;
         width: 90px;
     }
@@ -106,7 +106,7 @@ h2 {
 }
 
 @media (max-width: 480px) {
-    .grid-produtos {
+    .grade-produtos {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
         padding: 0 0 12px 0;
@@ -114,12 +114,12 @@ h2 {
     }
 
     
-    .view-produto {
+    .visualizar-produto {
         height: 90px;
         width: 90px;
     }
 
-    .view-produto img {
+    .visualizar-produto img {
         height: 90px;
         width: 90px;
     }
@@ -134,7 +134,7 @@ body.modal-aberto {
 }
 
 /* Overlay do Modal */
-.produto-modal-overlay {
+.sobreposicao-modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -153,13 +153,13 @@ body.modal-aberto {
     transition: opacity 0.3s ease;
 }
 
-.produto-modal-overlay.ativo {
+.sobreposicao-modal.ativo {
     opacity: 1;
     pointer-events: auto;
 }
 
 /* Card do Modal */
-.produto-modal-card {
+.cartao-modal {
     background-color: #ffffff;
     border-radius: 18px;
     max-width: 780px;
@@ -174,12 +174,12 @@ body.modal-aberto {
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.produto-modal-overlay.ativo .produto-modal-card {
+.sobreposicao-modal.ativo .cartao-modal {
     transform: scale(1) translateY(0);
 }
 
 /* Botão Fechar */
-.btn-modal-fechar {
+.botao-modal-fechar {
     position: absolute;
     top: 14px;
     right: 14px;
@@ -198,12 +198,12 @@ body.modal-aberto {
     transition: background-color 0.2s, transform 0.2s;
 }
 
-.btn-modal-fechar:hover {
+.botao-modal-fechar:hover {
     background-color: rgba(0, 0, 0, 0.12);
 }
 
 /* Coluna da Imagem */
-.modal-coluna-img {
+.modal-coluna-imagem {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     display: flex;
     align-items: center;
@@ -214,7 +214,7 @@ body.modal-aberto {
     border-bottom-left-radius: 18px;
 }
 
-.modal-img-container {
+.modal-container-imagem {
     width: 100%;
     height: 100%;
     display: flex;
@@ -222,7 +222,7 @@ body.modal-aberto {
     justify-content: center;
 }
 
-.modal-img-container img {
+.modal-container-imagem img {
     max-width: 100%;
     max-height: 280px;
     object-fit: contain;
@@ -231,19 +231,19 @@ body.modal-aberto {
     transition: transform 0.3s ease;
 }
 
-.modal-img-container img:hover {
+.modal-container-imagem img:hover {
     transform: scale(1.05);
 }
 
 /* Coluna de Informações */
-.modal-coluna-info {
+.modal-coluna-informacao {
     padding: 35px 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.modal-badge-categoria {
+.modal-emblema-categoria {
     display: inline-block;
     background-color: #f1f3f5;
     color: var(--Cinza-Escuro);
@@ -312,20 +312,20 @@ body.modal-aberto {
 }
 
 /* Seletor de Quantidade */
-.modal-linha-qtd {
+.modal-linha-quantidade {
     display: flex;
     align-items: center;
     gap: 12px;
     margin-bottom: 20px;
 }
 
-.modal-linha-qtd label {
+.modal-linha-quantidade label {
     font-size: 13px;
     font-weight: 600;
     color: var(--Preto);
 }
 
-.seletor-qtd {
+.seletor-quantidade {
     display: flex;
     align-items: center;
     border: 1px solid #ced4da;
@@ -333,7 +333,7 @@ body.modal-aberto {
     overflow: hidden;
 }
 
-.seletor-qtd button {
+.seletor-quantidade button {
     background-color: #f8f9fa;
     border: none;
     width: 34px;
@@ -348,11 +348,11 @@ body.modal-aberto {
     transition: background-color 0.2s;
 }
 
-.seletor-qtd button:hover {
+.seletor-quantidade button:hover {
     background-color: #e9ecef;
 }
 
-.seletor-qtd input {
+.seletor-quantidade input {
     width: 44px;
     height: 34px;
     border: none;
@@ -364,8 +364,8 @@ body.modal-aberto {
     outline: none;
 }
 
-.seletor-qtd input::-webkit-outer-spin-button,
-.seletor-qtd input::-webkit-inner-spin-button {
+.seletor-quantidade input::-webkit-outer-spin-button,
+.seletor-quantidade input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
@@ -377,7 +377,7 @@ body.modal-aberto {
     gap: 10px;
 }
 
-.btn-modal-add {
+.botao-modal-adicionar {
     background-color: var(--Preto);
     color: #ffffff;
     border: none;
@@ -394,13 +394,13 @@ body.modal-aberto {
     transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
-.btn-modal-add:hover {
+.botao-modal-adicionar:hover {
     background-color: #333333;
     transform: translateY(-1px);
     box-shadow: 0 6px 16px rgba(24, 24, 24, 0.25);
 }
 
-.btn-modal-continuar {
+.botao-modal-continuar {
     background-color: transparent;
     color: var(--Preto);
     border: 1px solid #ced4da;
@@ -416,13 +416,13 @@ body.modal-aberto {
     transition: background-color 0.2s, border-color 0.2s;
 }
 
-.btn-modal-continuar:hover {
+.botao-modal-continuar:hover {
     background-color: #f8f9fa;
     border-color: #adb5bd;
 }
 
-/* Toast de confirmação */
-.modal-toast {
+/* Aviso de confirmação */
+.modal-aviso {
     display: none;
     margin-top: 14px;
     background-color: #ebfbee;
@@ -434,11 +434,11 @@ body.modal-aberto {
     animation: fadeIn 0.3s ease;
 }
 
-.modal-toast.visivel {
+.modal-aviso.visivel {
     display: block;
 }
 
-.modal-toast-mensagem {
+.modal-aviso-mensagem {
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -446,13 +446,13 @@ body.modal-aberto {
     margin-bottom: 8px;
 }
 
-.modal-toast-botoes {
+.modal-aviso-botoes {
     display: flex;
     gap: 8px;
 }
 
-.modal-toast-botoes a,
-.modal-toast-botoes button {
+.modal-aviso-botoes a,
+.modal-aviso-botoes button {
     font-size: 12px;
     padding: 6px 12px;
     border-radius: 5px;
@@ -462,22 +462,22 @@ body.modal-aberto {
     border: none;
 }
 
-.btn-toast-ir-carrinho {
+.botao-aviso-ir-carrinho {
     background-color: #2b8a3e;
     color: #ffffff !important;
 }
 
-.btn-toast-ir-carrinho:hover {
+.botao-aviso-ir-carrinho:hover {
     background-color: #237032;
 }
 
-.btn-toast-continuar {
+.botao-aviso-continuar {
     background-color: transparent;
     color: #2b8a3e;
     border: 1px solid #2b8a3e !important;
 }
 
-.btn-toast-continuar:hover {
+.botao-aviso-continuar:hover {
     background-color: rgba(43, 138, 62, 0.08);
 }
 
@@ -495,22 +495,22 @@ body.modal-aberto {
 
 /* Responsivo para o Modal */
 @media (max-width: 768px) {
-    .produto-modal-card {
+    .cartao-modal {
         grid-template-columns: 1fr;
         max-height: 85vh;
     }
 
-    .modal-coluna-img {
+    .modal-coluna-imagem {
         padding: 25px 20px;
         border-top-right-radius: 18px;
         border-bottom-left-radius: 0;
     }
 
-    .modal-img-container img {
+    .modal-container-imagem img {
         max-height: 180px;
     }
 
-    .modal-coluna-info {
+    .modal-coluna-informacao {
         padding: 20px;
     }
 

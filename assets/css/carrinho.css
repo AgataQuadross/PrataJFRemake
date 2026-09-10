@@ -1,6 +1,6 @@
 /* ===== CSS DO CARRINHO (Baseado no style.css) ===== */
 
-.carrinho-container {
+.container-carrinho {
     max-width: 900px;
     margin: 50px auto;
     padding: 30px;
@@ -9,7 +9,7 @@
     box-shadow: 0 4px 10px var(--Transparente);
 }
 
-.carrinho-container h2 {
+.container-carrinho h2 {
     text-align: center;
     color: var(--Preto);
     margin-bottom: 30px;
@@ -67,7 +67,7 @@
 }
 
 /* Botão de remover */
-.tabela-carrinho .btn-remover {
+.tabela-carrinho .botao-remover {
     background-color: #d9534f;
     color: #ffffff;
     border: none;
@@ -80,7 +80,7 @@
     transition: background-color 0.2s;
 }
 
-.tabela-carrinho .btn-remover:hover {
+.tabela-carrinho .botao-remover:hover {
     background-color: #c9302c;
 }
 
@@ -106,7 +106,7 @@
 }
 
 /* Botão de Finalizar */
-.btn-finalizar {
+.botao-finalizar {
     background-color: var(--Preto);
     color: var(--Cinza);
     border: none;
@@ -118,7 +118,7 @@
     transition: background-color 0.3s, color 0.3s;
 }
 
-.btn-finalizar:hover {
+.botao-finalizar:hover {
     background-color: var(--Cinza-Escuro);
     color: #ffffff;
 }
@@ -153,7 +153,7 @@
 
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
-    .carrinho-container {
+    .container-carrinho {
         margin: 20px 15px;
         padding: 20px 15px;
     }
@@ -173,7 +173,7 @@
         text-align: center;
     }
 
-    .btn-finalizar {
+    .botao-finalizar {
         width: 100%;
     }
 }

@@ -10,7 +10,7 @@
 *{box-sizing: border-box;
 }
 
-.login-container {
+.container-login {
     min-height: calc(100vh - 200px);
     padding-top: 80px;
     padding-bottom: 40px;
@@ -19,7 +19,7 @@
     align-items: center;
 }
 
-.login-card {
+.cartao-login {
     background-color: var(--Branco);
     color: var(--Preto);
     width: 100%;
@@ -29,25 +29,25 @@
     box-shadow: 0 10px 25px var(--Transparente);
 }
 
-.login-card h1 {
+.cartao-login h1 {
     text-align: center;
     margin-bottom: 24px;
     font-size: 1.8rem;
 }
 
-.form-group {
+.grupo-formulario {
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
 }
 
-.form-group label {
+.grupo-formulario label {
     margin-bottom: 6px;
     font-size: 0.9rem;
 }
 
-.form-group input[type="email"],
-.form-group input[type="password"] {
+.grupo-formulario input[type="email"],
+.grupo-formulario input[type="password"] {
     width: 100%;
     padding: 10px;
     border: 1px solid var(--Branco);
@@ -60,13 +60,13 @@
     transition: all 0.2s ease;
 }
 
-.form-group input[type="email"]:focus,
-.form-group input[type="password"]:focus {
+.grupo-formulario input[type="email"]:focus,
+.grupo-formulario input[type="password"]:focus {
     border-color:  var(--Preto);
     box-shadow: 0 0 8px var(--Transparente);
 }
 
-.form-checkbox {
+.caixa-selecao {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -74,11 +74,11 @@
     font-size: 0.9rem;
 }
 
-.form-checkbox input {
+.caixa-selecao input {
     cursor: pointer;
 }
 
-.btn-submit {
+.botao-enviar {
     display: block;
     text-align: center;
     text-decoration: none;
@@ -95,18 +95,18 @@
     transition: all 0.2s ease;
 }
 
-.btn-submit:hover {
+.botao-enviar:hover {
     background-color: var(--Preto);
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
     transform: translateY(-2px);
 }
 
-.btn-submit:active {
+.botao-enviar:active {
     transform: translateY(1px);
     box-shadow: 0 2px 4px var(--Preto)
 }
 
-.login-links {
+.links-login {
     margin-top: 20px;
     text-align: center;
     display: flex;
@@ -114,12 +114,12 @@
     gap: 8px;
 }
 
-.login-links a {
+.links-login a {
     color: var(--Preto);
     text-decoration: none;
     font-size: 0.85rem;
 }
 
-.login-links a:hover {
+.links-login a:hover {
     text-decoration: underline;
 }
