@@ -1,65 +1,121 @@
 :root {
+    --Branco: #ffffff;
     --Cinza: #c9c9c9;
     --Cinza-Escuro: #6b6b6b;
     --Preto: #181818;
     --Transparente: #18181880;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.secao-lojas {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 20px 40px;
 }
 
-body {
-    background-color: var(--Cinza);
+.titulo-secao {
+    font-size: 2rem;
+    font-weight: 700;
     color: var(--Preto);
-    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-
-.titulo-principal {
-    color: var(--Cinza);
-    margin-top: 40px;
+.grade-lojas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
-/* ajustando os cards das lojas pra n ficar um branco muito forte */
 .cartao-loja {
-    border: 2px solid var(--Cinza-Escuro);
-    background-color: #eaeaea;
+    border: 1px solid var(--Cinza);
+    background-color: var(--Branco);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px var(--Transparente);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.cartao-loja:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px var(--Transparente);
+}
 
-.rodape {
-    background-color: var(--Preto);
-    height: 100px;
+.cartao-loja a {
+    display: block;
+    overflow: hidden;
+    height: 220px;
+    background-color: var(--Cinza);
+}
+
+.imagem-loja {
     width: 100%;
-    padding: 20px;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.cartao-loja:hover .imagem-loja {
+    transform: scale(1.05);
+}
+
+.info-loja {
+    padding: 24px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    flex: 1;
+    justify-content: space-between;
 }
 
-.rodape p {
-    color: var(--Cinza);
-    margin: 0;
+.nome-loja {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--Preto);
+    margin-bottom: 12px;
 }
 
-.meio {
-    display: flex;
-    justify-content: center;
+.endereco-loja {
+    font-size: 0.95rem;
+    color: var(--Cinza-Escuro);
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.telefone-loja {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--Preto);
+    margin-bottom: 6px;
+}
+
+.whatsapp-loja {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--Preto);
+    background-color: var(--Cinza);
+    padding: 6px 12px;
+    border-radius: 20px;
+    display: inline-flex;
     align-items: center;
-    margin: 50px;
+    gap: 6px;
 }
 
-.meio img {
-    max-width: 100%;
-    height: auto;
+/* Responsividade Lojas */
+@media (max-width: 992px) {
+    .grade-lojas {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-/* Responsivo - localização */
-@media (max-width: 768px) {
-    .meio {
-        margin: 20px 10px;
+@media (max-width: 600px) {
+    .grade-lojas {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-secao {
+        font-size: 1.5rem;
     }
 }

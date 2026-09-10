@@ -1,7 +1,6 @@
 :root {
     --Branco: #ffffff;
     --Cinza: #c9c9c9;
-    --Cinza-Claro: #f4f4f4;
     --Cinza-Escuro: #6b6b6b;
     --Preto: #181818;
     --Transparente: #18181880;
@@ -31,7 +30,8 @@ body {
     max-width: 420px;
     padding: 35px 30px;
     border-radius: 16px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--Cinza);
+    box-shadow: 0 15px 35px var(--Transparente);
     text-align: left;
 }
 
@@ -76,9 +76,9 @@ body {
 .grupo-formulario input[type="text"] {
     width: 100%;
     padding: 12px 14px;
-    border: 1px solid #ced4da;
+    border: 1px solid var(--Cinza-Escuro);
     border-radius: 8px;
-    background-color: #fcfcfc;
+    background-color: var(--Branco);
     color: var(--Preto);
     font-size: 0.95rem;
     outline: none;
@@ -87,8 +87,7 @@ body {
 
 .grupo-formulario input:focus {
     border-color: var(--Preto);
-    box-shadow: 0 0 0 3px rgba(24, 24, 24, 0.12);
-    background-color: #ffffff;
+    box-shadow: 0 0 0 3px var(--Transparente);
 }
 
 .caixa-selecao {
@@ -114,26 +113,25 @@ body {
     width: 100%;
     padding: 13px;
     background-color: var(--Preto);
-    color: #ffffff;
-    border: none;
+    color: var(--Branco);
+    border: 1px solid var(--Preto);
     border-radius: 8px;
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(24, 24, 24, 0.25);
+    box-shadow: 0 4px 10px var(--Transparente);
     transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .botao-enviar:hover {
-    background-color: #333333;
-    color: #ffffff;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+    background-color: var(--Cinza-Escuro);
+    border-color: var(--Cinza-Escuro);
+    color: var(--Branco);
     transform: translateY(-2px);
 }
 
 .botao-enviar:active {
     transform: translateY(0);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .links-login {
@@ -142,12 +140,12 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    border-top: 1px solid #e9ecef;
+    border-top: 1px solid var(--Cinza);
     padding-top: 18px;
 }
 
 .links-login a {
-    color: #495057;
+    color: var(--Cinza-Escuro);
     text-decoration: none;
     font-size: 0.88rem;
     font-weight: 500;

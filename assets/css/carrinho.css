@@ -1,10 +1,19 @@
-/* ===== CSS DO CARRINHO (Baseado no style.css) ===== */
+:root {
+    --Branco: #ffffff;
+    --Cinza: #c9c9c9;
+    --Cinza-Escuro: #6b6b6b;
+    --Preto: #181818;
+    --Transparente: #18181880;
+}
+
+/* ===== CSS DO CARRINHO ===== */
 
 .container-carrinho {
     max-width: 900px;
     margin: 50px auto;
     padding: 30px;
-    background-color: #ffffff;
+    background-color: var(--Branco);
+    border: 1px solid var(--Cinza);
     border-radius: 10px;
     box-shadow: 0 4px 10px var(--Transparente);
 }

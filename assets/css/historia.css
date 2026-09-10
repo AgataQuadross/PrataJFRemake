@@ -1,19 +1,63 @@
-.letra-historia {
-    font-size: 30px;
-    font-weight: 400;
-    text-align: center;
-    margin: 20px;
+:root {
+    --Branco: #ffffff;
+    --Cinza: #c9c9c9;
+    --Cinza-Escuro: #6b6b6b;
+    --Preto: #181818;
+    --Transparente: #18181880;
 }
 
+.container-historia {
+    max-width: 900px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 0 20px;
+}
 
+.cartao-historia {
+    background-color: var(--Branco);
+    border: 1px solid var(--Cinza);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 12px var(--Transparente);
+    text-align: center;
+}
+
+.cartao-historia h2 {
+    font-size: 1.8rem;
+    color: var(--Preto);
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.letra-historia-destaque {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--Preto);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.letra-historia {
+    font-size: 1rem;
+    color: var(--Cinza-Escuro);
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
 
 @media (max-width: 768px) {
-    .letra-historia {
-        font-size: 20px;
-        margin: 15px 10px;
+    .cartao-historia {
+        padding: 25px 20px;
     }
 
-    .meio {
-        margin: 20px 10px;
+    .cartao-historia h2 {
+        font-size: 1.4rem;
+    }
+
+    .letra-historia-destaque {
+        font-size: 1rem;
+    }
+
+    .letra-historia {
+        font-size: 0.95rem;
     }
 }

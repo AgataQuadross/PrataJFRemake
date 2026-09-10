@@ -3,29 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recuperar Senha</title>
+    <title>Recuperar Senha - Prata JF</title>
+    <script src="https://kit.fontawesome.com/7d729e43cb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/recuperacao.css">
 </head>
 <body>
 
     <main class="container-login">
         <section class="cartao-login">
-            <h1>Recuperar Senha</h1>
+            <div class="logo-login">
+                <a href="principal.html" aria-label="Ir para a loja Prata JF">
+                    <img src="assets/img/PRATA_JF_LOGO_100px.png" alt="Logo Prata JF">
+                </a>
+            </div>
 
-            <form action="index.html" method="POST">
+            <h1>Recuperar Senha</h1>
+            <p class="instrucoes-recuperacao">Informe seu e-mail cadastrado e enviaremos as instruções para redefinição de senha.</p>
+
+            <form action="index.html" method="GET" aria-label="Formulário de Recuperação de Senha">
                 <div class="grupo-formulario">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+                    <label for="email">E-mail Cadastrado</label>
+                    <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com" autocomplete="email">
                 </div>
 
-                <a href="index.html" class="botao-enviar">Enviar link</a>
+                <button type="submit" class="botao-enviar">Enviar Link de Recuperação</button>
             </form>
 
             <div class="links-login">
-                <a href="index.html">Voltar para o Login</a>
+                <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Voltar para o Login</a>
+                <a href="principal.html"><i class="fa-solid fa-gem"></i> Continuar navegando na loja</a>
             </div>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Prata JF. Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 </html>

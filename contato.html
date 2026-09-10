@@ -12,88 +12,215 @@
 </head>
 
 <body>
-    <nav>
-        <a href="principal.html"><img src="assets/img/PRATA_JF_LOGO_100px.png" alt="logo/botão de retorno, Prata jf"></a>
-        <button class="botao-hamburguer" onclick="toggleMenu()">
+    <nav aria-label="Navegação Principal">
+        <a href="principal.html" aria-label="Página Inicial Prata JF"><img src="assets/img/PRATA_JF_LOGO_100px.png" alt="Logo Prata JF"></a>
+        <button class="botao-hamburguer" onclick="toggleMenu()" aria-label="Abrir menu de navegação" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
         </button>
-        <ul class="navegador">
-            <li><a href="principal.html" title="Voltar para a Loja"><i class="fa-solid fa-arrow-left-long"></i></a></li>
-            <li><a href="historia.html" title="Nossa História"><i class="fa-regular fa-newspaper"></i></a></li>
-            <li><a href="conta.html" title="Minha Conta"><i class="fa-regular fa-user"></i></a></li>
-            <li><a href="localizacao.html" title="Nossas Lojas"><i class="fa-solid fa-location-dot"></i></a></li>
-            <li><a href="carrinho.html" class="link-carrinho" title="Ver Carrinho"><i class="fa-solid fa-cart-shopping"></i><span class="contador-carrinho" id="cart-count" style="display: none;">0</span></a></li>
+        <ul class="navegador" id="menu-navegacao">
+            <li><a href="principal.html" title="Voltar para a Loja" aria-label="Voltar para a Loja"><i class="fa-solid fa-arrow-left-long"></i></a></li>
+            <li><a href="historia.html" title="Nossa História" aria-label="Nossa História"><i class="fa-regular fa-newspaper"></i></a></li>
+            <li><a href="conta.html" title="Minha Conta" aria-label="Minha Conta"><i class="fa-regular fa-user"></i></a></li>
+            <li><a href="localizacao.html" title="Nossas Lojas" aria-label="Nossas Lojas"><i class="fa-solid fa-location-dot"></i></a></li>
+            <li><a href="carrinho.html" class="link-carrinho" title="Ver Carrinho" aria-label="Ver Carrinho"><i class="fa-solid fa-cart-shopping"></i><span class="contador-carrinho" id="cart-count" style="display: none;">0</span></a></li>
         </ul>
     </nav>
-    <header class="cabecalho-carrossel">
+
+    <header class="cabecalho-carrossel" aria-label="Destaques Prata JF">
         <img src="assets/img/stackcolaresbg.png" alt="Colares Prata JF" class="foto-carrossel ativa">
         <img src="assets/img/stackpulseiras.jpg" alt="Pulseiras Prata JF" class="foto-carrossel">
         <img src="assets/img/stackanelbg.jpg" alt="Anéis Prata JF" class="foto-carrossel">
         <img src="assets/img/fotofundooriginal.jpg" alt="Fundo Prata JF" class="foto-carrossel">
     </header>
 
-    <main>
-         <section class="meio">
-            <img src="assets/img/bordinha-removebg-preview.png" alt="bordinha topo">
+    <main id="conteudo-principal">
+        <section class="meio">
+            <img src="assets/img/bordinha-removebg-preview.png" alt="Divisor decorativo">
         </section>
-        <div class="meio">
-            <div class="col-lg-3">
-                <h2 class="text-center">Você tem alguma pergunta?</h2>
-                <p>www.pratajf.com.br</p>
-                <p>Ligue para nós:</p>
-                <p>Mister -> (21) 96994-0029</p>
-                <p>Halfeld -> (21) 96963-2627</p>
-                <p>E-mail:
-                    <a href="mailto:contato@pratajf.com.br">contato@pratajf.com.br</a>
-                </p>
+
+        <section class="container-contato">
+            <div class="cartao-contato">
+                <!-- Coluna de Informações e Contato Direto -->
+                <div class="contato-informacoes">
+                    <span class="emblema-contato">Atendimento Personalizado</span>
+                    <h2>Fale Conosco</h2>
+                    <p class="descricao-contato">
+                        Dúvidas sobre pedidos, joias em Prata 925 legítima ou suporte? Nossa equipe está pronta para te atender!
+                    </p>
+
+                    <div class="lista-canais-contato">
+                        <div class="item-canal-contato">
+                            <div class="icone-canal">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div class="info-canal">
+                                <strong>WhatsApp & Telefone (Loja Mister)</strong>
+                                <a href="https://wa.me/5521969940029" target="_blank" rel="noopener noreferrer" aria-label="Conversar com Loja Mister no WhatsApp">(21) 96994-0029</a>
+                            </div>
+                        </div>
+
+                        <div class="item-canal-contato">
+                            <div class="icone-canal">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div class="info-canal">
+                                <strong>WhatsApp & Telefone (Loja Halfeld)</strong>
+                                <a href="https://wa.me/5521969632627" target="_blank" rel="noopener noreferrer" aria-label="Conversar com Loja Halfeld no WhatsApp">(21) 96963-2627</a>
+                            </div>
+                        </div>
+
+                        <div class="item-canal-contato">
+                            <div class="icone-canal">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div class="info-canal">
+                                <strong>E-mail de Atendimento</strong>
+                                <a href="mailto:contato@pratajf.com.br" aria-label="Enviar e-mail para contato@pratajf.com.br">contato@pratajf.com.br</a>
+                            </div>
+                        </div>
+
+                        <div class="item-canal-contato">
+                            <div class="icone-canal">
+                                <i class="fa-solid fa-store"></i>
+                            </div>
+                            <div class="info-canal">
+                                <strong>Horário de Funcionamento</strong>
+                                <span>Segunda a Sexta: 09h às 19h | Sábado: 09h às 15h</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/5521969940029" target="_blank" rel="noopener noreferrer" class="botao-whatsapp-direto" aria-label="Iniciar conversa no WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i> Iniciar Conversa no WhatsApp
+                    </a>
+                </div>
+
+                <!-- Coluna do Formulário de Envio -->
+                <div class="contato-formulario-wrapper">
+                    <h3>Envie uma Mensagem</h3>
+                    <p class="subtitulo-formulario">Preencha os campos abaixo e responderemos o mais breve possível.</p>
+
+                    <form id="formulario-contato" onsubmit="enviarMensagemContato(event)" class="formulario-contato" aria-label="Formulário de Contato">
+                        <div class="grupo-campo">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" name="nome" id="nome" class="campo-contato" placeholder="Seu nome completo" required autocomplete="name">
+                        </div>
+
+                        <div class="grupo-campo">
+                            <label for="email">E-mail de Contato</label>
+                            <input type="email" name="email" id="email" class="campo-contato" placeholder="seuemail@exemplo.com" required autocomplete="email">
+                        </div>
+
+                        <div class="grupo-campo">
+                            <label for="assunto">Assunto</label>
+                            <select name="assunto" id="assunto" class="campo-contato" required>
+                                <option value="" disabled selected>Selecione um assunto</option>
+                                <option value="Dúvida sobre Produto">Dúvida sobre Produto / Joia</option>
+                                <option value="Status do Pedido">Status do Pedido / Entrega</option>
+                                <option value="Garantia e Trocas">Garantia e Trocas</option>
+                                <option value="Cupons e Promoções">Cupons e Promoções</option>
+                                <option value="Outro">Outro assunto</option>
+                            </select>
+                        </div>
+
+                        <div class="grupo-campo">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea name="mensagem" id="mensagem" class="campo-contato campo-textarea" placeholder="Como podemos te ajudar?" required></textarea>
+                        </div>
+
+                        <button type="submit" class="botao-enviar-mensagem" id="botao-enviar-msg">
+                            <i class="fa-regular fa-paper-plane"></i> Enviar Mensagem
+                        </button>
+                    </form>
+
+                    <div id="aviso-contato" class="aviso-mensagem-sucesso" style="display: none;" role="status" aria-live="polite">
+                        <i class="fa-solid fa-circle-check"></i> Mensagem enviada com sucesso! Entraremos em contato em breve.
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-5">
-                <form method="post" class="grupo-formulario">
-                    <label for="nome">Nome</label>
-                    <input type="text" name="nome" class="campo-formulario" id="nome" placeholder="Nome completo"
-                        required="">
-                    <label for="email">E-mail</label>
-                    <input type="email" name="email" class="campo-formulario" id="email" placeholder="Email de contato"
-                        required="">
-                    <label for="assunto">Assunto</label>
-                    <input type="text" name="assunto" class="campo-formulario" id="assunto" placeholder="Titulo"
-                        required="">
-                    <label for="conteudo">Conteúdo</label>
-                    <textarea name="conteudo" class="campo-formulario" id="conteudo" placeholder="Mensagem"
-                        required=""></textarea>
-                    <button type="submit" class="botao-enviar-contato">Enviar</button>
-                </form>
-            </div>
-        </div>
-         <section class="meio">
-            <img src="assets/img/bordinha-removebg-preview.png" alt="bordinha topo">
+        </section>
+
+        <section class="meio">
+            <img src="assets/img/bordinha-removebg-preview.png" alt="Divisor decorativo">
         </section>
     </main>
 
-    <footer>
-        <section class="redes">
-            <p>&copy Todos os direitos reservados</p>
-            <h3>Redes Sociais</h3>
-            <ul>
-                <li>
-                    <a href="https://www.instagram.com/pratajf.oficial" target="_blank">Instagram</a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/pratajf.oficial" target="_blank">Facebook</a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/playlist?list=PLc6GkUJNMFSdrMxr_dEmtDWNnuEGLCmPq"
-                        target="_blank">Youtube</a>
-                </li>
-            </ul>
-        </section>
+    <footer class="rodape-principal">
+        <div class="container-rodape">
+            <div class="rodape-coluna rodape-sobre">
+                <h3><i class="fa-solid fa-gem"></i> Prata JF</h3>
+                <p>Especialistas em joias sofisticadas em Prata 925 legítima. Tradição, brilho e qualidade eterna para marcar seus momentos especiais.</p>
+                <div class="emblema-garantia-rodape">
+                    <i class="fa-solid fa-shield-halved"></i> Garantia Vitalícia do Metal
+                </div>
+            </div>
+
+            <div class="rodape-coluna rodape-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="principal.html"><i class="fa-solid fa-chevron-right"></i> Loja & Vitrine</a></li>
+                    <li><a href="historia.html"><i class="fa-solid fa-chevron-right"></i> Nossa História</a></li>
+                    <li><a href="localizacao.html"><i class="fa-solid fa-chevron-right"></i> Nossas Lojas</a></li>
+                    <li><a href="conta.html"><i class="fa-solid fa-chevron-right"></i> Minha Conta</a></li>
+                    <li><a href="favoritos.html"><i class="fa-solid fa-chevron-right"></i> Meus Favoritos</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape-coluna rodape-redes">
+                <h4>Siga-nos & Contato</h4>
+                <p>Acompanhe novidades, lançamentos e promoções exclusivas:</p>
+                <div class="grade-redes-sociais">
+                    <a href="https://www.instagram.com/pratajf.oficial" target="_blank" rel="noopener noreferrer" class="cartao-rede-social" aria-label="Acessar Instagram da Prata JF">
+                        <i class="fa-brands fa-instagram"></i> <span>Instagram</span>
+                    </a>
+                    <a href="https://www.facebook.com/pratajf.oficial" target="_blank" rel="noopener noreferrer" class="cartao-rede-social" aria-label="Acessar Facebook da Prata JF">
+                        <i class="fa-brands fa-facebook-f"></i> <span>Facebook</span>
+                    </a>
+                    <a href="https://wa.me/5521969940029" target="_blank" rel="noopener noreferrer" class="cartao-rede-social" aria-label="Falar conosco no WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i> <span>WhatsApp</span>
+                    </a>
+                    <a href="https://www.youtube.com/playlist?list=PLc6GkUJNMFSdrMxr_dEmtDWNnuEGLCmPq" target="_blank" rel="noopener noreferrer" class="cartao-rede-social" aria-label="Acessar canal do YouTube">
+                        <i class="fa-brands fa-youtube"></i> <span>YouTube</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="rodape-inferior">
+            <p>&copy; 2026 Prata JF. Todos os direitos reservados.</p>
+            <div class="rodape-selos">
+                <span><i class="fa-solid fa-lock"></i> Compra Segura</span>
+                <span><i class="fa-solid fa-certificate"></i> Prata 925 Certificada</span>
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/funcionalidades.js"></script>
     <script src="assets/js/carrossel.js"></script>
+    <script>
+        function enviarMensagemContato(evento) {
+            evento.preventDefault();
+            const btn = document.getElementById('botao-enviar-msg');
+            const aviso = document.getElementById('aviso-contato');
+            const form = document.getElementById('formulario-contato');
+
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
+
+            setTimeout(() => {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fa-regular fa-paper-plane"></i> Enviar Mensagem';
+                aviso.style.display = 'flex';
+                form.reset();
+                setTimeout(() => {
+                    aviso.style.display = 'none';
+                }, 6000);
+            }, 800);
+        }
+    </script>
 </body>
 
 </html>
