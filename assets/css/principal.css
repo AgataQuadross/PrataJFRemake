@@ -6,8 +6,9 @@
 }
 
 /* Tamanho da logo */
+nav img,
 .logo-container img {
-    height: 80px;
+    height: 50px;
     width: auto;
     object-fit: contain;
 }

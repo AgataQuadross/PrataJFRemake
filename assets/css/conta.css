@@ -172,31 +172,6 @@ body {
 
 
 @media (max-width: 768px) {
-    .container-cabecalho {
-        padding: 0 15px !important;
-    }
-
-    .botao-menu-mobile {
-        display: block;
-    }
-
-    .icones-cabecalho {
-        display: none !important;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--Branco);
-        flex-direction: column !important;
-        padding: 15px 0;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        gap: 15px !important;
-    }
-
-    .icones-cabecalho.ativo {
-        display: flex !important;
-    }
-
     .container-conta {
         grid-template-columns: 1fr;
         margin: 10px auto;
