@@ -167,6 +167,12 @@ footer {
     opacity: 1;
 }
 
+/* Navigation logo size */
+nav a img {
+    height: 20px;
+    width: auto;
+    object-fit: contain;
+
 /* ===== RESPONSIVO ===== */
 
 @media (max-width: 768px) {
