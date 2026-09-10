@@ -71,9 +71,12 @@ body {
 }
 
 .navegacao-conta {
+    position: static;
     display: flex;
     flex-direction: column;
     gap: 8px;
+    background-color: transparent;
+    padding: 0;
 }
 
 .item-navegacao {
