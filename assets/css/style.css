@@ -226,7 +226,7 @@ footer {
 
 /* Navigation logo size */
 nav a img {
-    height: 80px;
+    height: 20px;
     width: auto;
     object-fit: contain;
 }
