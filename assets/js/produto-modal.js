@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (toast) {
             toast.classList.add('visivel');
         } else {
-            alert(`"${produtoAtivo.nome}" foi adicionado ao seu carrinho!`);
+            mostrarAviso('Produto adicionado', `"${produtoAtivo.nome}" foi adicionado ao seu carrinho.`, 'fa-solid fa-cart-shopping');
         }
     }
 

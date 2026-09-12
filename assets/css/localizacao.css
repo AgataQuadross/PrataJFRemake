@@ -20,6 +20,14 @@
     margin-bottom: 40px;
 }
 
+.introducao-lojas {
+    max-width: 620px;
+    margin: -20px auto 24px;
+    text-align: center;
+    color: var(--Cinza-Escuro);
+    font-size: 1rem;
+}
+
 .grade-lojas {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -42,7 +50,7 @@
     box-shadow: 0 8px 20px var(--Transparente);
 }
 
-.cartao-loja a {
+.cartao-loja > a:first-child {
     display: block;
     overflow: hidden;
     height: 220px;
@@ -103,6 +111,33 @@
     gap: 6px;
 }
 
+.acoes-loja {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.mapa-loja,
+.whatsapp-loja {
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.mapa-loja {
+    color: var(--Branco);
+    background-color: var(--Preto);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.mapa-loja:hover {
+    background-color: var(--Cinza-Escuro);
+    color: var(--Branco);
+}
+
 /* Responsividade Lojas */
 @media (max-width: 992px) {
     .grade-lojas {
@@ -117,5 +152,21 @@
 
     .titulo-secao {
         font-size: 1.5rem;
+    }
+
+    .secao-lojas {
+        padding: 10px 12px 30px;
+    }
+
+    .cartao-loja > a:first-child {
+        height: 180px;
+    }
+
+    .info-loja {
+        padding: 18px 12px;
+    }
+
+    .acoes-loja a {
+        font-size: 0.8rem;
     }
 }

@@ -21,6 +21,19 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    animation: aparecer 0.5s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 main {
@@ -84,6 +97,17 @@ nav {
     transform: scale(1.05);
 }
 
+.navegador a:focus-visible,
+.botao-hamburguer:focus-visible,
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--Preto);
+    outline-offset: 3px;
+}
+
 /* Badge do Contador do Carrinho */
 .contador-carrinho {
     position: absolute;
@@ -142,6 +166,74 @@ nav {
     object-fit: contain;
     display: block;
     margin: 0 auto;
+}
+
+.aviso-site-sobreposicao {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--Transparente);
+}
+
+.aviso-site-sobreposicao.ativo {
+    display: flex;
+}
+
+.aviso-site-cartao {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    padding: 32px 25px 25px;
+    background-color: var(--Branco);
+    border: 1px solid var(--Cinza);
+    border-radius: 12px;
+    box-shadow: 0 15px 35px var(--Transparente);
+    text-align: center;
+    animation: aparecerAviso 0.25s ease;
+}
+
+.aviso-site-cartao > i {
+    color: var(--Preto);
+    font-size: 2rem;
+}
+
+.aviso-site-cartao h2 {
+    margin: 12px 0 8px;
+    font-size: 1.25rem;
+}
+
+.aviso-site-cartao p {
+    margin-bottom: 20px;
+    color: var(--Cinza-Escuro);
+}
+
+.aviso-site-fechar {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    border: none;
+    background: none;
+    color: var(--Cinza-Escuro);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.aviso-site-botao {
+    padding: 10px 26px;
+    border: 1px solid var(--Preto);
+    border-radius: 8px;
+    background-color: var(--Preto);
+    color: var(--Branco);
+    cursor: pointer;
+}
+
+@keyframes aparecerAviso {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Carrossel do Header */
@@ -352,6 +444,8 @@ footer {
         background-color: var(--Cinza);
         padding: 15px 0;
         box-shadow: 0 4px 6px var(--Transparente);
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
     }
 
     /* Quando o menu está aberto */
@@ -384,4 +478,30 @@ footer {
         margin: 20px auto;
         padding: 0 10px;
     }
+
+    .tabela-carrinho {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown),
+select:invalid {
+    border-color: #9b2c2c;
+}
+
+input:valid:not(:placeholder-shown),
+textarea:valid:not(:placeholder-shown),
+select:valid {
+    border-color: #4d704d;
 }

@@ -21,6 +21,11 @@ body {
     flex-direction: column;
 }
 
+.meio-conta {
+    margin-top: 85px;
+    margin-bottom: 10px;
+}
+
 .container-conta {
     max-width: 1100px;
     width: 100%;
@@ -595,5 +600,10 @@ body {
 
     .painel-lateral {
         padding: 15px;
+    }
+
+    .meio-conta {
+        margin-top: 75px;
+        padding: 0 10px;
     }
 }

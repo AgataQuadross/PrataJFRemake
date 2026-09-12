@@ -29,7 +29,7 @@ body {
     width: 100%;
     max-width: 420px;
     padding: 35px 30px;
-    border-radius: 16px;
+    border-radius: 12px;
     border: 1px solid var(--Cinza);
     box-shadow: 0 15px 35px var(--Transparente);
     text-align: left;
@@ -83,6 +83,12 @@ body {
     font-size: 0.95rem;
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.mensagem-erro {
+    color: #9b2c2c;
+    font-size: 0.8rem;
+    margin-top: 5px;
 }
 
 .grupo-formulario input:focus {
