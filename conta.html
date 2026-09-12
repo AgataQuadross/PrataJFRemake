@@ -15,7 +15,7 @@
     <nav>
         <a href="principal.html"><img src="assets/img/PRATA_JF_LOGO_100px.png"
                 alt="logo/botão de retorno, Prata jf"></a>
-        <button class="botao-hamburguer" onclick="toggleMenu()">
+        <button class="botao-hamburguer" onclick="toggleMenu()" aria-label="Abrir menu de navegação" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -33,7 +33,7 @@
     </nav>
 
     <main>
-        <section class="meio">
+        <section class="meio meio-conta">
             <img src="assets/img/bordinha-removebg-preview.png" alt="bordinha topo">
         </section>
 
@@ -72,7 +72,7 @@
 
             <section class="conteudo-conta">
                 <div class="secao-pedidos" id="compras">
-                    <h2>Minhas Compras</h2>
+                    <h2>Meus pedidos </h2>
 
                     <div class="status-grid">
                         <div class="status-card" onclick="alternarHistoricoCompras()" title="Ver pedidos a pagar">

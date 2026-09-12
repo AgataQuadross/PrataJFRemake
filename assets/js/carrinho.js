@@ -74,7 +74,7 @@ function salvarCarrinho() {
 // Botão de finalizar compra
 function finalizarCompra() {
     if (carrinho.length === 0) {
-        alert("Seu carrinho está vazio!");
+        mostrarAviso('Carrinho vazio', 'Adicione pelo menos um produto antes de finalizar a compra.', 'fa-solid fa-cart-shopping');
         return;
     }
 
@@ -105,7 +105,7 @@ function finalizarCompra() {
         console.error('Erro ao registrar histórico:', erro);
     }
 
-    alert("Compra finalizada com sucesso! Seu pedido foi registrado no seu histórico.");
+    mostrarAviso('Compra realizada!', 'Seu pedido foi registrado com sucesso e já está sendo preparado. Você pode acompanhar tudo em Minha Conta.', 'fa-solid fa-circle-check');
     carrinho = [];
     salvarCarrinho();
     renderizarCarrinho();

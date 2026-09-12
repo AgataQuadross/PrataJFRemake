@@ -206,7 +206,7 @@ function adicionarFavoritoAoCarrinho(nomeProduto) {
         contador.style.display = total > 0 ? 'inline-flex' : 'none';
     }
 
-    alert(`"${produto.nome}" foi adicionado ao seu carrinho!`);
+    mostrarAviso('Produto adicionado', `"${produto.nome}" foi adicionado ao seu carrinho.`, 'fa-solid fa-cart-shopping');
 }
 
 // Inicializa os favoritos na carga do documento
